@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行业法律 - 合盛钮扣厂</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* 法律法规页面专用样式 - 与主页色调统一 */
+        .regulations-hero {
+            background: linear-gradient(135deg, #c9a96e 0%, #d4af37 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .regulations-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="rgba(255,255,255,0.1)">⚖️</text></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .regulations-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .regulations-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .regulations-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .country-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .country-tab {
+            background: white;
+            border: 2px solid #e9ecef;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .country-tab.active,
+        .country-tab:hover {
+            background: #c9a96e;
+            border-color: #c9a96e;
+            color: white;
+        }
+
+        .regulations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .regulation-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #c9a96e;
+        }
+
+        .regulation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .regulation-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 20px 25px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .regulation-type {
+            color: #c9a96e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .regulation-title {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .regulation-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .regulation-content {
+            padding: 25px;
+        }
+
+        .regulation-summary {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .regulation-details {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .regulation-details h4 {
+            color: #c9a96e;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .regulation-details ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #666;
+        }
+
+        .regulation-details li {
+            margin-bottom: 5px;
+        }
+
+        .compliance-status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-active {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-updated {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            padding: 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: #c9a96e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .regulations-hero h1 {
+                font-size: 2rem;
+            }
+
+            .regulations-hero {
+                padding: 100px 20px 60px;
+            }
+
+            .regulations-content {
+                padding: 60px 20px;
+            }
+
+            .regulations-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .country-tabs {
+                gap: 8px;
+            }
+
+            .country-tab {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .regulation-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← 返回首页</a>
+
+    <section class="regulations-hero">
+        <div class="container">
+            <h1>行业法律法规</h1>
+            <p>全球钮扣行业生产、环保、材质等法律法规和标准要求</p>
+        </div>
+    </section>
+
+    <div class="regulations-content">
+        <div class="country-tabs">
+            <button class="country-tab active" data-country="all">🌍 全部</button>
+            <button class="country-tab" data-country="china">🇨🇳 中国</button>
+            <button class="country-tab" data-country="eu">🇪🇺 欧盟</button>
+            <button class="country-tab" data-country="usa">🇺🇸 美国</button>
+            <button class="country-tab" data-country="japan">🇯🇵 日本</button>
+            <button class="country-tab" data-country="international">🌐 国际</button>
+        </div>
+
+        <div class="regulations-grid" id="regulationsGrid">
+            <!-- 中国法规 -->
+            <article class="regulation-card" data-country="china">
+                <div class="regulation-header">
+                    <div class="regulation-type">环保法规</div>
+                    <h3 class="regulation-title">《限制商品过度包装要求》GB 23350-2021</h3>
+                    <div class="regulation-date">生效日期：2023年9月1日</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        新版国家标准对钮扣等服装辅料的包装材料和包装层数提出了更严格的环保要求，推动行业绿色发展。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>主要要求：</h4>
+                        <ul>
+                            <li>包装材料应优先选择可回收、可降解材料</li>
+                            <li>限制过度包装层数，最多不超过4层</li>
+                            <li>包装空隙率不得超过60%</li>
+                            <li>禁止使用有毒有害包装材料</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+
+            <article class="regulation-card" data-country="china">
+                <div class="regulation-header">
+                    <div class="regulation-type">质量标准</div>
+                    <h3 class="regulation-title">《钮扣》QB/T 1615-2006</h3>
+                    <div class="regulation-date">实施日期：2007年6月1日</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        规定了钮扣产品的分类、技术要求、试验方法、检验规则、标志、包装、运输和贮存等要求。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>技术要求：</h4>
+                        <ul>
+                            <li>外观质量：表面光滑，无明显缺陷</li>
+                            <li>尺寸精度：直径偏差±0.1mm</li>
+                            <li>强度要求：拉力测试&ge;50N</li>
+                            <li>色牢度：&ge;3级（干摩擦）</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-updated">2024年修订中</span>
+                </div>
+            </article>
+
+            <!-- 欧盟法规 -->
+            <article class="regulation-card" data-country="eu">
+                <div class="regulation-header">
+                    <div class="regulation-type">化学安全</div>
+                    <h3 class="regulation-title">REACH法规 (EC) No 1907/2006</h3>
+                    <div class="regulation-date">最新修订：2024年10月</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        欧盟化学品注册、评估、授权和限制法规，对钮扣生产中使用的化学物质提出严格管控要求。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>钮扣行业相关限制：</h4>
+                        <ul>
+                            <li>禁用偶氮染料（致癌芳香胺释放量&gt;30mg/kg）</li>
+                            <li>限制重金属含量（铅&lt;90mg/kg，镉&lt;100mg/kg）</li>
+                            <li>邻苯二甲酸酯含量&lt;0.1%</li>
+                            <li>甲醛释放量&lt;75mg/kg</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+
+            <article class="regulation-card" data-country="eu">
+                <div class="regulation-header">
+                    <div class="regulation-type">环保指令</div>
+                    <h3 class="regulation-title">单一使用塑料指令 (EU) 2019/904</h3>
+                    <div class="regulation-date">生效日期：2021年7月3日</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        限制特定一次性塑料制品的使用，推动塑料钮扣向可持续材料转型。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>对钮扣行业影响：</h4>
+                        <ul>
+                            <li>鼓励使用生物基塑料材料</li>
+                            <li>提高塑料钮扣的可回收性设计</li>
+                            <li>减少微塑料污染风险</li>
+                            <li>建立生产者责任延伸制度</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+
+            <!-- 美国法规 -->
+            <article class="regulation-card" data-country="usa">
+                <div class="regulation-header">
+                    <div class="regulation-type">消费品安全</div>
+                    <h3 class="regulation-title">CPSIA消费品安全改进法案</h3>
+                    <div class="regulation-date">最新修订：2024年8月</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        针对儿童产品的安全要求，对12岁以下儿童服装钮扣的铅含量、邻苯二甲酸酯等有害物质进行严格限制。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>儿童钮扣要求：</h4>
+                        <ul>
+                            <li>总铅含量&lt;100ppm</li>
+                            <li>表面涂层铅含量&lt;90ppm</li>
+                            <li>6种邻苯二甲酸酯总含量&lt;0.1%</li>
+                            <li>小部件测试（防吞咽风险）</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+
+            <!-- 日本法规 -->
+            <article class="regulation-card" data-country="japan">
+                <div class="regulation-header">
+                    <div class="regulation-type">工业标准</div>
+                    <h3 class="regulation-title">JIS S 4021:2019 钮扣试验方法</h3>
+                    <div class="regulation-date">实施日期：2019年3月20日</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        规定了钮扣产品的物理性能测试方法，包括强度、耐久性、色牢度等测试标准。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>测试项目：</h4>
+                        <ul>
+                            <li>拉脱强度测试：&ge;70N（成人服装）</li>
+                            <li>耐洗涤性能：50次洗涤后无明显变化</li>
+                            <li>耐光色牢度：&ge;4级</li>
+                            <li>耐摩擦色牢度：&ge;3级</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+
+            <!-- 国际标准 -->
+            <article class="regulation-card" data-country="international">
+                <div class="regulation-header">
+                    <div class="regulation-type">国际标准</div>
+                    <h3 class="regulation-title">ISO 105系列 纺织品色牢度试验</h3>
+                    <div class="regulation-date">最新版本：2023年</div>
+                </div>
+                <div class="regulation-content">
+                    <p class="regulation-summary">
+                        国际标准化组织制定的纺织品色牢度测试标准，适用于各类钮扣产品的色牢度评估。
+                    </p>
+                    <div class="regulation-details">
+                        <h4>主要测试标准：</h4>
+                        <ul>
+                            <li>ISO 105-B02：耐人造光色牢度</li>
+                            <li>ISO 105-C06：耐家庭和商业洗涤色牢度</li>
+                            <li>ISO 105-X12：耐摩擦色牢度</li>
+                            <li>ISO 105-E04：耐汗渍色牢度</li>
+                        </ul>
+                    </div>
+                    <span class="compliance-status status-active">现行有效</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        // 国家/地区筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const countryTabs = document.querySelectorAll('.country-tab');
+            const regulationCards = document.querySelectorAll('.regulation-card');
+
+            countryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有活跃状态
+                    countryTabs.forEach(t => t.classList.remove('active'));
+                    // 添加当前按钮的活跃状态
+                    this.classList.add('active');
+
+                    const country = this.dataset.country;
+
+                    // 筛选法规卡片
+                    regulationCards.forEach(card => {
+                        if (country === 'all' || card.dataset.country === country) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s ease';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 添加淡入动画
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // 页面加载动画
+            regulationCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

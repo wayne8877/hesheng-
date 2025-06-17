@@ -1,0 +1,268 @@
+/**
+ * CDN图片加载器样式
+ * 提供优雅的加载动画和错误处理
+ */
+
+/* 懒加载图片基础样式 */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* 加载中状态 */
+.lazy-load.loading {
+    opacity: 0.7;
+    animation: shimmer 1.5s infinite;
+}
+
+/* 加载完成状态 */
+.lazy-load.loaded {
+    opacity: 1;
+    animation: none;
+    background: none;
+}
+
+/* 加载失败状态 */
+.lazy-load.error {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    background: #f5f5f5;
+    position: relative;
+}
+
+.lazy-load.error::after {
+    content: '⚠️ 图片加载失败';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* 闪烁加载动画 */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* 渐入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lazy-load.loaded {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* 高端加载效果 */
+.gallery-item .lazy-load {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item .lazy-load.loading {
+    background: linear-gradient(
+        45deg,
+        rgba(212, 175, 55, 0.1) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(212, 175, 55, 0.1) 75%
+    );
+    background-size: 200% 200%;
+    animation: luxuryShimmer 2s infinite;
+}
+
+@keyframes luxuryShimmer {
+    0% {
+        background-position: -200% -200%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* 响应式图片 */
+.lazy-load {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 主题适配 */
+[data-theme="dark"] .lazy-load {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+}
+
+[data-theme="dark"] .lazy-load.error {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .lazy-load.error::after {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a;
+}
+
+/* 主题特定的加载效果 */
+.theme-minimal .lazy-load.loading {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        rgba(0, 0, 0, 0.02) 50%,
+        rgba(0, 0, 0, 0.05) 75%
+    );
+}
+
+.theme-luxury .lazy-load.loading {
+    background: linear-gradient(
+        45deg,
+        rgba(218, 165, 32, 0.1) 25%,
+        rgba(184, 134, 11, 0.05) 50%,
+        rgba(218, 165, 32, 0.1) 75%
+    );
+}
+
+.theme-geometric .lazy-load.loading {
+    background: linear-gradient(
+        90deg,
+        rgba(52, 152, 219, 0.1) 25%,
+        rgba(44, 62, 80, 0.05) 50%,
+        rgba(52, 152, 219, 0.1) 75%
+    );
+}
+
+/* 加载指示器 */
+.cdn-status {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cdn-status.show {
+    opacity: 1;
+}
+
+.cdn-status.success {
+    background: rgba(34, 197, 94, 0.9);
+}
+
+.cdn-status.error {
+    background: rgba(239, 68, 68, 0.9);
+}
+
+/* 预加载提示 */
+.preload-hint {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(212, 175, 55, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .preload-hint {
+    opacity: 1;
+}
+
+/* 网络状态指示 */
+.network-status {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.network-status.offline {
+    opacity: 1;
+    visibility: visible;
+}
+
+.network-status .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.network-status .message {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.network-status .retry-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.network-status .retry-btn:hover {
+    background: #2563eb;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .lazy-load.error::after {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+    
+    .cdn-status {
+        bottom: 10px;
+        right: 10px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    
+    .network-status {
+        margin: 20px;
+        padding: 15px;
+    }
+    
+    .network-status .icon {
+        font-size: 36px;
+    }
+    
+    .network-status .message {
+        font-size: 14px;
+    }
+}

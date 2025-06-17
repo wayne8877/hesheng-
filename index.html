@@ -1,0 +1,3154 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" /> <!-- 字符编码 -->
+    <title data-translate="company_name"> Button Factory He Sheng</title> <!-- 网页标题 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 响应式视口设置 -->
+    <meta name="description" content="合盛钮扣厂-专业钮扣制造商" /> <!-- 网页描述 -->
+    <link rel="stylesheet" href="assets/css/main.css" /> <!-- 主样式表 -->
+    <link rel="stylesheet" href="assets/css/about.css" /> <!-- 关于页面样式 -->
+    <link rel="stylesheet" href="assets/css/cdn-loader.css" /> <!-- CDN加载动画样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- 轮播图Swiper样式 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"> <!-- 字体 -->
+    <style>
+        :root {
+            /* 🎨 高端时尚企业设计系统 - 20年时尚行业标准 */
+
+            /* 核心色彩系统 - 时尚行业经典配色 */
+            --fashion-charcoal: #2C2C2C;          /* 主要文字色 - 时尚炭黑 */
+            --fashion-warm-gray: #6B6B6B;         /* 次要文字色 - 温暖灰 */
+            --fashion-light-gray: #F8F8F8;        /* 背景色 - 优雅浅灰 */
+            --fashion-cream: #FEFEFE;              /* 纯净白 - 奢华质感 */
+            --fashion-gold: #C9A96E;               /* 时尚金 - 低调奢华 */
+            --fashion-gold-light: #E8D5B7;        /* 浅金色 - 精致点缀 */
+            --fashion-gold-dark: #B8956A;         /* 深金色 - 强调色 */
+
+            /* 背景系统 - 层次分明的视觉体验 */
+            --bg-primary: linear-gradient(135deg, #FEFEFE 0%, #F8F8F8 50%, #F5F5F5 100%);
+            --bg-secondary: rgba(254, 254, 254, 0.92);
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --bg-overlay: rgba(44, 44, 44, 0.05);
+
+            /* 文字系统 - 时尚排版标准 */
+            --text-primary: var(--fashion-charcoal);
+            --text-secondary: var(--fashion-warm-gray);
+            --text-accent: var(--fashion-gold);
+            --text-light: rgba(44, 44, 44, 0.7);
+            --text-muted: rgba(107, 107, 107, 0.8);
+
+            /* 边框与分割线 - 精致细节 */
+            --border-primary: rgba(44, 44, 44, 0.08);
+            --border-secondary: rgba(107, 107, 107, 0.12);
+            --border-accent: rgba(201, 169, 110, 0.25);
+            --border-light: rgba(248, 248, 248, 0.6);
+
+            /* 交互状态 - 优雅反馈 */
+            --hover-bg: rgba(44, 44, 44, 0.04);
+            --hover-accent: rgba(201, 169, 110, 0.12);
+            --active-bg: rgba(201, 169, 110, 0.15);
+            --focus-ring: rgba(201, 169, 110, 0.3);
+
+            /* 阴影系统 - 层次感营造 */
+            --shadow-subtle: 0 2px 8px rgba(44, 44, 44, 0.04);
+            --shadow-soft: 0 4px 16px rgba(44, 44, 44, 0.08);
+            --shadow-medium: 0 8px 32px rgba(44, 44, 44, 0.12);
+            --shadow-strong: 0 16px 64px rgba(44, 44, 44, 0.16);
+            --shadow-accent: 0 4px 20px rgba(201, 169, 110, 0.15);
+
+            /* 导航专用变量 - 精确控制 */
+            --nav-bg: rgba(254, 254, 254, 0.88);
+            --nav-border: rgba(44, 44, 44, 0.06);
+            --nav-shadow: var(--shadow-soft);
+            --nav-item-hover: rgba(201, 169, 110, 0.08);
+            --nav-item-active: rgba(201, 169, 110, 0.12);
+
+            /* 组件背景 - 统一视觉 */
+            --card-bg: rgba(254, 254, 254, 0.95);
+            --footer-bg: var(--fashion-light-gray);
+            --hero-overlay: rgba(44, 44, 44, 0.25);
+
+            /* 链接与按钮 - 一致性保证 */
+            --link-color: var(--fashion-gold);
+            --link-hover: var(--fashion-gold-dark);
+            --button-primary: var(--fashion-gold);
+            --button-primary-hover: var(--fashion-gold-dark);
+
+            /* 内容区域 - 清晰层次 */
+            --section-title: var(--fashion-charcoal);
+            --section-subtitle: var(--fashion-warm-gray);
+            --gallery-text: var(--fashion-charcoal);
+            --gallery-hover: rgba(201, 169, 110, 0.9);
+
+            /* 兼容性变量 - 向后兼容 */
+            --luxury-gold: var(--fashion-gold);
+            --luxury-gold-light: var(--fashion-gold-light);
+            --luxury-black: var(--fashion-charcoal);
+            --luxury-gray: var(--fashion-warm-gray);
+        }
+
+        [data-theme="dark"] {
+            /* 🌙 高端时尚暗色主题 - 夜间奢华体验 */
+
+            /* 暗色核心色彩系统 */
+            --fashion-charcoal: #F5F5F5;          /* 主要文字色 - 优雅浅色 */
+            --fashion-warm-gray: #D1D1D1;         /* 次要文字色 - 温暖浅灰 */
+            --fashion-light-gray: #1A1A1A;        /* 背景色 - 深邃黑 */
+            --fashion-cream: #0F0F0F;              /* 深色背景 - 纯净黑 */
+            --fashion-gold: #E8D5B7;               /* 暗色金 - 温暖光泽 */
+            --fashion-gold-light: #F4E4BC;        /* 亮金色 - 精致点缀 */
+            --fashion-gold-dark: #D4AF37;         /* 经典金 - 强调色 */
+
+            /* 暗色背景系统 */
+            --bg-primary: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #252525 100%);
+            --bg-secondary: rgba(15, 15, 15, 0.92);
+            --bg-glass: rgba(26, 26, 26, 0.85);
+            --bg-overlay: rgba(245, 245, 245, 0.05);
+
+            /* 暗色文字系统 */
+            --text-primary: var(--fashion-charcoal);
+            --text-secondary: var(--fashion-warm-gray);
+            --text-accent: var(--fashion-gold);
+            --text-light: rgba(245, 245, 245, 0.7);
+            --text-muted: rgba(209, 209, 209, 0.8);
+
+            /* 暗色边框系统 */
+            --border-primary: rgba(245, 245, 245, 0.08);
+            --border-secondary: rgba(209, 209, 209, 0.12);
+            --border-accent: rgba(232, 213, 183, 0.25);
+            --border-light: rgba(26, 26, 26, 0.6);
+
+            /* 暗色交互状态 */
+            --hover-bg: rgba(245, 245, 245, 0.04);
+            --hover-accent: rgba(232, 213, 183, 0.12);
+            --active-bg: rgba(232, 213, 183, 0.15);
+            --focus-ring: rgba(232, 213, 183, 0.3);
+
+            /* 暗色阴影系统 */
+            --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.4);
+            --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-strong: 0 16px 64px rgba(0, 0, 0, 0.6);
+            --shadow-accent: 0 4px 20px rgba(232, 213, 183, 0.2);
+
+            /* 暗色导航专用 */
+            --nav-bg: rgba(15, 15, 15, 0.88);
+            --nav-border: rgba(245, 245, 245, 0.06);
+            --nav-shadow: var(--shadow-soft);
+            --nav-item-hover: rgba(232, 213, 183, 0.08);
+            --nav-item-active: rgba(232, 213, 183, 0.12);
+
+            /* 暗色组件背景 */
+            --card-bg: rgba(26, 26, 26, 0.95);
+            --footer-bg: var(--fashion-light-gray);
+            --hero-overlay: rgba(0, 0, 0, 0.6);
+
+            /* 暗色链接与按钮 */
+            --link-color: var(--fashion-gold);
+            --link-hover: var(--fashion-gold-light);
+            --button-primary: var(--fashion-gold);
+            --button-primary-hover: var(--fashion-gold-light);
+
+            /* 暗色内容区域 */
+            --section-title: var(--fashion-charcoal);
+            --section-subtitle: var(--fashion-warm-gray);
+            --gallery-text: var(--fashion-charcoal);
+            --gallery-hover: rgba(232, 213, 183, 0.9);
+
+            /* 暗色兼容性变量 */
+            --luxury-gold: var(--fashion-gold);
+            --luxury-gold-light: var(--fashion-gold-light);
+            --luxury-black: var(--fashion-charcoal);
+            --luxury-gray: var(--fashion-warm-gray);
+        }
+
+        /* 🌙 暗色主题导航栏 - 现代玻璃态 */
+        [data-theme="dark"] .main-nav {
+            background: rgba(26, 26, 26, 0.12);
+            border-color: rgba(244, 228, 188, 0.2);
+
+            /* 暗色玻璃态阴影 */
+            box-shadow:
+                0 16px 64px rgba(0, 0, 0, 0.4),
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 4px 16px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                inset 0 -1px 0 rgba(244, 228, 188, 0.05),
+                0 0 0 1px rgba(244, 228, 188, 0.1);
+        }
+
+        /* 暗色主题渐变背景 */
+        [data-theme="dark"] .main-nav::before {
+            background: linear-gradient(135deg,
+                rgba(26, 26, 26, 0.2) 0%,
+                rgba(42, 42, 42, 0.1) 50%,
+                rgba(244, 228, 188, 0.05) 100%);
+        }
+
+        /* 暗色主题导航项 */
+        [data-theme="dark"] .nav-item {
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        [data-theme="dark"] .nav-item:hover:not(.active) {
+            background: rgba(244, 228, 188, 0.12);
+            color: rgba(244, 228, 188, 0.95);
+            border-color: rgba(244, 228, 188, 0.3);
+        }
+
+        [data-theme="dark"] .nav-item.active {
+            background: linear-gradient(135deg,
+                rgba(244, 228, 188, 0.9) 0%,
+                rgba(212, 175, 55, 0.95) 50%,
+                rgba(184, 134, 11, 1) 100%);
+            color: rgba(26, 26, 26, 0.95);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 100vh;
+            position: relative;
+            font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+        }
+
+        /* 选项1: 极简主义 - Chanel风格 */
+        .bg-option-1 body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* 纸张纹理 */
+                radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                /* 微妙网格 */
+                linear-gradient(0deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%),
+                linear-gradient(90deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%);
+            background-size:
+                400px 400px,
+                300px 300px,
+                20px 20px,
+                20px 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* 选项2: 奢华渐变 - Louis Vuitton风格 */
+        .bg-option-2 body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* 金色光晕 */
+                radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(184, 134, 11, 0.06) 0%, transparent 60%),
+                /* 丝绸纹理 */
+                linear-gradient(45deg, rgba(212, 175, 55, 0.02) 0%, transparent 25%, rgba(212, 175, 55, 0.02) 50%, transparent 75%);
+            background-size:
+                800px 600px,
+                600px 800px,
+                60px 60px;
+            pointer-events: none;
+            z-index: -1;
+            animation: luxuryFlow 30s ease-in-out infinite;
+        }
+
+        /* 选项3: 现代几何 - Hermès风格 */
+        .bg-option-3 body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* 几何图案 */
+                linear-gradient(30deg, transparent 40%, rgba(212, 175, 55, 0.015) 41%, rgba(212, 175, 55, 0.015) 42%, transparent 43%),
+                linear-gradient(150deg, transparent 40%, rgba(212, 175, 55, 0.015) 41%, rgba(212, 175, 55, 0.015) 42%, transparent 43%),
+                /* 菱形网格 */
+                linear-gradient(45deg, transparent 48%, rgba(0, 0, 0, 0.008) 49%, rgba(0, 0, 0, 0.008) 51%, transparent 52%);
+            background-size:
+                120px 120px,
+                120px 120px,
+                40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* 当前使用的背景 - 可以通过切换class来改变 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* 纸张纹理 */
+                radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                /* 微妙网格 */
+                linear-gradient(0deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%),
+                linear-gradient(90deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%);
+            background-size:
+                400px 400px,
+                300px 300px,
+                20px 20px,
+                20px 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* 光泽效果 - 更加微妙 */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(ellipse at center,
+                    rgba(212, 175, 55, 0.015) 0%,
+                    transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: subtleShimmer 40s ease-in-out infinite;
+        }
+
+        @keyframes luxuryFlow {
+            0%, 100% {
+                transform: translateX(0) translateY(0);
+                opacity: 0.8;
+            }
+            33% {
+                transform: translateX(20px) translateY(-10px);
+                opacity: 0.6;
+            }
+            66% {
+                transform: translateX(-10px) translateY(15px);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes subtleShimmer {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+                opacity: 0.2;
+            }
+            50% {
+                transform: rotate(90deg) scale(1.05);
+                opacity: 0.1;
+            }
+        }
+
+        /* 高端控制按钮容器 */
+        .top-right-controls {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        /* 悬停显示控制按钮 */
+        .top-right-controls:hover,
+        .top-right-controls.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        /* 显示触发区域 */
+        .controls-trigger {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 80px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .controls-trigger:hover + .top-right-controls,
+        .controls-trigger:hover ~ .top-right-controls {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        /* 🌐 小巧的语言切换按钮 */
+        .language-toggle-mini {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1002;
+            background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            border-radius: 20px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            min-width: 60px;
+            text-align: center;
+            -webkit-user-select: none;
+            user-select: none;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .language-toggle-mini:hover {
+            background: rgba(201, 169, 110, 0.1);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(201, 169, 110, 0.2);
+        }
+
+        .language-toggle-mini:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* 隐藏动画 */
+        .language-toggle-mini.hiding {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.8);
+            pointer-events: none;
+        }
+
+        /* 暗色主题适配 */
+        [data-theme="dark"] .language-toggle-mini {
+            background: rgba(26, 26, 26, 0.9);
+            color: var(--text-primary);
+            border-color: rgba(244, 228, 188, 0.3);
+        }
+
+        [data-theme="dark"] .language-toggle-mini:hover {
+            background: rgba(244, 228, 188, 0.1);
+            border-color: var(--luxury-gold-light);
+        }
+
+        /* 🌐 科技语言切换按钮 - 未来质感 */
+        #languageToggle {
+            background: rgba(15, 23, 42, 0.9);
+            -webkit-backdrop-filter: blur(32px) saturate(180%);
+            backdrop-filter: blur(32px) saturate(180%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: rgba(226, 232, 240, 0.9);
+            padding: 12px 20px;
+            border-radius: 28px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow:
+                0 8px 24px rgba(59, 130, 246, 0.1),
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(148, 163, 184, 0.1),
+                inset 0 -1px 0 rgba(59, 130, 246, 0.05);
+            position: relative;
+            overflow: hidden;
+
+            /* 文字渲染优化 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        #languageToggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.15), transparent);
+            transition: left 0.5s ease;
+        }
+
+        #languageToggle:hover {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.5);
+            color: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+            box-shadow:
+                0 6px 20px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(148, 163, 184, 0.15);
+        }
+
+        #languageToggle:hover::before {
+            left: 100%;
+        }
+
+        /* 🔮 科技主题切换器 - 未来工艺 */
+        .theme-switch-wrapper {
+            background: rgba(15, 23, 42, 0.9);
+            -webkit-backdrop-filter: blur(32px) saturate(180%);
+            backdrop-filter: blur(32px) saturate(180%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 32px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow:
+                0 8px 24px rgba(59, 130, 246, 0.1),
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(148, 163, 184, 0.1),
+                inset 0 -1px 0 rgba(59, 130, 246, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-switch-wrapper:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-2px);
+            box-shadow:
+                0 6px 20px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(148, 163, 184, 0.15);
+        }
+
+        .theme-switch {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            position: relative;
+            width: 56px;
+            height: 28px;
+        }
+
+        .theme-switch-icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .theme-switch-slider {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg,
+                rgba(59, 130, 246, 1) 0%,
+                rgba(37, 99, 235, 1) 50%,
+                rgba(29, 78, 216, 1) 100%);
+            border-radius: 50%;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow:
+                0 4px 16px rgba(59, 130, 246, 0.4),
+                0 2px 8px rgba(37, 99, 235, 0.3),
+                inset 0 1px 0 rgba(148, 163, 184, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+            left: 0;
+            z-index: 1;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        /* 滑块悬停效果 */
+        .theme-switch-wrapper:hover .theme-switch-slider {
+            transform: scale(1.1);
+            box-shadow:
+                0 6px 20px rgba(212, 175, 55, 0.5),
+                0 3px 10px rgba(184, 134, 11, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        [data-theme="dark"] .theme-switch-slider {
+            transform: translateX(28px);
+            background: linear-gradient(135deg, #F4E4BC 0%, var(--luxury-gold) 100%);
+        }
+
+        /* 暗色主题适配 */
+        [data-theme="dark"] #languageToggle {
+            background: rgba(26, 26, 26, 0.95);
+            color: var(--text-primary);
+            border-color: rgba(244, 228, 188, 0.2);
+        }
+
+        [data-theme="dark"] #languageToggle:hover {
+            background: rgba(244, 228, 188, 0.1);
+            border-color: var(--luxury-gold-light);
+        }
+
+        [data-theme="dark"] .theme-switch-wrapper {
+            background: rgba(26, 26, 26, 0.95);
+            border-color: rgba(244, 228, 188, 0.2);
+        }
+
+        [data-theme="dark"] .theme-switch-wrapper:hover {
+            border-color: var(--luxury-gold-light);
+        }
+
+        /* 背景选择器样式 */
+        .bg-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 4px;
+            gap: 2px;
+            box-shadow:
+                0 4px 16px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .bg-option {
+            background: transparent;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-option:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--luxury-gold);
+            transform: translateY(-1px);
+        }
+
+        .bg-option.active {
+            background: linear-gradient(135deg, var(--luxury-gold) 0%, #B8860B 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .bg-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .bg-option:hover::before {
+            left: 100%;
+        }
+
+        /* 主题风格变量 */
+        .theme-minimal {
+            --theme-primary: #000000;
+            --theme-secondary: #666666;
+            --theme-accent: #000000;
+            --theme-bg-overlay: rgba(0, 0, 0, 0.02);
+            --theme-border: rgba(0, 0, 0, 0.08);
+            --theme-shadow: rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-luxury {
+            --theme-primary: #8B4513;
+            --theme-secondary: #CD853F;
+            --theme-accent: #DAA520;
+            --theme-bg-overlay: rgba(218, 165, 32, 0.05);
+            --theme-border: rgba(218, 165, 32, 0.15);
+            --theme-shadow: rgba(218, 165, 32, 0.1);
+        }
+
+        .theme-geometric {
+            --theme-primary: #2C3E50;
+            --theme-secondary: #34495E;
+            --theme-accent: #3498DB;
+            --theme-bg-overlay: rgba(52, 152, 219, 0.03);
+            --theme-border: rgba(52, 152, 219, 0.1);
+            --theme-shadow: rgba(52, 152, 219, 0.08);
+        }
+
+        /* 主题应用到各个元素 */
+        .theme-minimal .nav-item:hover:not(.active) {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--theme-primary);
+        }
+
+        .theme-minimal .nav-item.active {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            color: white;
+        }
+
+        .theme-luxury .nav-item:hover:not(.active) {
+            background: var(--theme-bg-overlay);
+            color: var(--theme-accent);
+        }
+
+        .theme-luxury .nav-item.active {
+            background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-secondary) 100%);
+            color: white;
+        }
+
+        .theme-geometric .nav-item:hover:not(.active) {
+            background: var(--theme-bg-overlay);
+            color: var(--theme-accent);
+        }
+
+        .theme-geometric .nav-item.active {
+            background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-primary) 100%);
+            color: white;
+        }
+
+        /* 按钮主题样式 */
+        .theme-minimal .more-btn:hover,
+        .theme-minimal .subscribe-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .theme-luxury .more-btn:hover,
+        .theme-luxury .subscribe-btn:hover {
+            background: var(--theme-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--theme-shadow);
+        }
+
+        .theme-geometric .more-btn:hover,
+        .theme-geometric .subscribe-btn:hover {
+            background: var(--theme-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--theme-shadow);
+        }
+
+        /* 卡片主题样式 */
+        .theme-minimal .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-luxury .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--theme-shadow);
+        }
+
+        .theme-geometric .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--theme-shadow);
+        }
+
+        /* 主题切换时的全局动画 */
+        .theme-switching * {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        /* 点击波纹效果 */
+        .ripple-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-effect::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .ripple-effect.ripple-active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* 主题特定的导航栏样式 */
+        .theme-minimal .main-nav {
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .theme-luxury .main-nav {
+            border-color: rgba(218, 165, 32, 0.3);
+            box-shadow: 0 8px 32px rgba(218, 165, 32, 0.15);
+        }
+
+        .theme-geometric .main-nav {
+            border-color: rgba(52, 152, 219, 0.2);
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.12);
+        }
+
+        /* 主题特定的控制按钮样式 */
+        .theme-minimal #languageToggle:hover {
+            border-color: #000000;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-luxury #languageToggle:hover {
+            border-color: var(--theme-accent);
+            background: var(--theme-bg-overlay);
+        }
+
+        .theme-geometric #languageToggle:hover {
+            border-color: var(--theme-accent);
+            background: var(--theme-bg-overlay);
+        }
+
+        /* 暗色主题适配 */
+        [data-theme="dark"] .bg-selector {
+            background: rgba(26, 26, 26, 0.95);
+            border-color: rgba(244, 228, 188, 0.2);
+        }
+
+        [data-theme="dark"] .bg-option {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .bg-option:hover {
+            background: rgba(244, 228, 188, 0.1);
+            color: var(--luxury-gold-light);
+        }
+
+        [data-theme="dark"] .bg-option.active {
+            background: linear-gradient(135deg, var(--luxury-gold-light) 0%, var(--luxury-gold) 100%);
+            color: var(--luxury-black);
+        }
+
+        /* 🎨 高端时尚导航栏 - 20年时尚行业设计精髓 */
+        .main-nav {
+            /* 精确定位系统 - 优雅悬浮 */
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 1200px;
+            height: auto;
+            min-height: 68px;
+
+            /* 时尚玻璃态效果 - 精致质感 */
+            background: var(--nav-bg);
+            -webkit-backdrop-filter: blur(24px) saturate(120%);
+            backdrop-filter: blur(24px) saturate(120%);
+
+            /* 时尚边框系统 - 精致轮廓 */
+            border: 1px solid var(--nav-border);
+            border-radius: 24px;
+
+            /* 时尚阴影系统 - 层次美学 */
+            box-shadow: var(--nav-shadow),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 var(--border-accent);
+
+            /* 丝滑过渡动画 */
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+            /* 性能优化 */
+            will-change: transform, backdrop-filter, box-shadow;
+            isolation: isolate;
+            contain: layout style paint;
+        }
+
+        /* 极简装饰 - 移除复杂效果 */
+
+        /* 玻璃效果增强 */
+        .glass-effect {
+            position: absolute;
+            z-index: 0;
+            inset: 0;
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur));
+            filter: url(#glass-distortion);
+            overflow: hidden;
+            border-radius: inherit;
+        }
+
+        /* 玻璃着色 */
+        .glass-tint {
+            z-index: 1;
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, var(--glass-tint-opacity));
+            border-radius: inherit;
+        }
+
+        /* 玻璃高光/边缘 */
+        .glass-shine {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            overflow: hidden;
+            border-radius: inherit;
+            box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, var(--glass-shine-opacity)),
+                        inset -1px -1px 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* ⚡ 滚动状态 - 科技增强效果 */
+        .main-nav.nav-scrolled {
+            /* 滚动时背景增强 - 更强科技感 */
+            background: rgba(15, 23, 42, 0.95);
+            -webkit-backdrop-filter: blur(50px) saturate(200%) brightness(1.15);
+            backdrop-filter: blur(50px) saturate(200%) brightness(1.15);
+
+            /* 边框增强 - 蓝色科技光晕 */
+            border-color: rgba(59, 130, 246, 0.4);
+
+            /* 科技阴影系统 - 立体悬浮感 */
+            box-shadow:
+                0 12px 48px rgba(59, 130, 246, 0.15),
+                0 6px 24px rgba(0, 0, 0, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(148, 163, 184, 0.15),
+                inset 0 -1px 0 rgba(59, 130, 246, 0.1);
+
+            /* 精致悬浮效果 */
+            transform: translateX(-50%) translateY(-3px) scale(1.01);
+        }
+
+        /* 导航容器布局 */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* 🎯 导航链接容器 - 完美均匀分布 */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            gap: 12px;
+            position: relative;
+            padding: 0 8px;
+        }
+
+        /* 🎨 时尚导航项 - 高端时尚设计 */
+        .nav-item {
+            /* 时尚布局系统 - 黄金比例 */
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 16px;
+            text-decoration: none;
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 16px;
+
+            /* 时尚字体系统 - 优雅排版 */
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+            font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+
+            /* 高端字体渲染 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+
+            /* 时尚背景系统 - 纯净透明 */
+            background: transparent;
+            border: 1px solid transparent;
+
+            /* 优雅过渡动画 - 时尚缓动 */
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+            /* 性能优化 */
+            will-change: transform, background-color, color, box-shadow, border-color;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            contain: layout style paint;
+        }
+
+        /* 🎨 时尚微动效果 - 优雅光泽 */
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                var(--hover-accent) 0%,
+                rgba(201, 169, 110, 0.05) 50%,
+                var(--hover-accent) 100%);
+            border-radius: inherit;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: -1;
+        }
+
+        /* � 时尚悬停效果 - 优雅提升 */
+        .nav-item:hover:not(.active) {
+            color: var(--text-primary);
+            background: var(--nav-item-hover);
+            border-color: var(--border-accent);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        /* 悬停时光泽显现 */
+        .nav-item:hover:not(.active)::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* 🏆 时尚活跃状态 - 金色优雅设计 */
+        .nav-item.active {
+            color: var(--text-primary);
+            font-weight: 600;
+            background: var(--nav-item-active);
+            border-color: var(--border-accent);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-accent);
+        }
+
+        /* 活跃状态的光泽常驻 */
+        .nav-item.active::before {
+            opacity: 0.8;
+            transform: scale(1);
+        }
+
+        /* 时尚活跃状态悬停 - 增强优雅效果 */
+        .nav-item.active:hover {
+            color: var(--fashion-charcoal);
+            background: var(--active-bg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* 英文模式下导航项字体调整 */
+        .nav-item.lang-en-nav {
+            font-size: 14px; /* 或者尝试 13px / 0.85em 等 */
+            padding: 8px 10px; /* 减小左右内边距，例如从16px减到10px */
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        #languageToggle {
+            border: 1px solid var(--border-color);
+            background: transparent;
+            padding: 8px 16px;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+            margin-left: 5px;
+        }
+
+        #languageToggle:hover {
+            background: var(--hover-bg);
+        }
+
+        .get-started-btn {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .get-started-btn::after {
+            content: "→";
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .get-started-btn:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+
+        /* 主要内容区域样式 */
+        .hero-section {
+            height: 65vh;
+            min-height: 500px;
+            max-height: 800px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 120px;
+            margin-bottom: 120px;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hero-overlay);
+            z-index: 1;
+        }
+
+        /* 轮播图样式 */
+        .hero-swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-swiper .swiper-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 轮播指示器样式 - 三条杠 */
+        .hero-swiper .swiper-pagination {
+            bottom: 15px;
+            z-index: 10;
+        }
+
+        .hero-swiper .swiper-pagination-bullet {
+            width: 30px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+            margin: 0 4px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-swiper .swiper-pagination-bullet-active {
+            background: var(--fashion-gold);
+            width: 40px;
+            height: 4px;
+        }
+
+        /* 轮播导航箭头样式 */
+        .hero-swiper .swiper-button-next,
+        .hero-swiper .swiper-button-prev {
+            color: rgba(255, 255, 255, 0.8);
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .hero-swiper .swiper-button-next:hover,
+        .hero-swiper .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.5);
+            color: var(--fashion-gold);
+            transform: scale(1.1);
+        }
+
+        .hero-swiper .swiper-button-next::after,
+        .hero-swiper .swiper-button-prev::after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 轮播图响应式设计 */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 50vh;
+                min-height: 400px;
+                max-height: 600px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+
+            .hero-swiper .swiper-button-next,
+            .hero-swiper .swiper-button-prev {
+                width: 40px;
+                height: 40px;
+                margin-top: -20px;
+            }
+
+            .hero-swiper .swiper-button-next::after,
+            .hero-swiper .swiper-button-prev::after {
+                font-size: 16px;
+            }
+
+            .hero-swiper .swiper-pagination-bullet {
+                width: 25px;
+                height: 2px;
+                margin: 0 3px;
+            }
+
+            .hero-swiper .swiper-pagination-bullet-active {
+                width: 35px;
+                height: 3px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                height: 45vh;
+                min-height: 350px;
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+
+            .hero-swiper .swiper-pagination {
+                bottom: 10px;
+            }
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+
+        .hero-description {
+            font-size: 24px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+
+        /* 📱 奢华响应式设计 - 平板优化 */
+        @media (max-width: 1024px) {
+            .main-nav {
+                width: 92%;
+                max-width: 950px;
+                padding: 12px 16px;
+                border-radius: 28px;
+                top: 16px;
+                height: 60px;
+            }
+
+            .nav-links {
+                gap: 8px;
+                max-width: 750px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+                padding: 14px 10px;
+                border-radius: 18px;
+            }
+
+            .nav-item.active {
+                transform: translateY(-1px) scale(1.01);
+                box-shadow:
+                    0 4px 16px rgba(59, 130, 246, 0.18),
+                    0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-item.active:hover {
+                transform: translateY(-2px) scale(1.02);
+                box-shadow:
+                    0 6px 20px rgba(59, 130, 246, 0.25),
+                    0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        /* 📱 奢华手机端优化 - 精致触控体验 */
+        @media (max-width: 768px) {
+            .main-nav {
+                width: 96%;
+                padding: 10px 14px;
+                border-radius: 24px;
+                top: 12px;
+                height: 56px;
+
+                /* 移动端科技玻璃态 */
+                background: rgba(15, 23, 42, 0.9);
+                -webkit-backdrop-filter: blur(30px) saturate(170%) brightness(1.05);
+                backdrop-filter: blur(30px) saturate(170%) brightness(1.05);
+                border: 1px solid rgba(59, 130, 246, 0.2);
+            }
+
+            .nav-links {
+                gap: 6px;
+                max-width: 100%;
+            }
+
+            .nav-item {
+                font-size: 13px;
+                padding: 12px 8px;
+                border-radius: 16px;
+                min-height: 44px; /* 触控友好 */
+            }
+
+            .nav-item.active {
+                transform: translateY(-1px) scale(1.01);
+                background: linear-gradient(135deg,
+                    rgba(59, 130, 246, 0.15) 0%,
+                    rgba(37, 99, 235, 0.1) 100%);
+                box-shadow:
+                    0 4px 16px rgba(59, 130, 246, 0.25),
+                    0 2px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .nav-item.active:hover {
+                transform: translateY(-1px) scale(1.02);
+                box-shadow:
+                    0 6px 20px rgba(59, 130, 246, 0.3),
+                    0 3px 10px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 18px;
+            }
+
+            .slide-caption h2 {
+                font-size: 32px;
+            }
+
+            .slide-caption p {
+                font-size: 16px;
+            }
+
+        /* 📱 超小屏幕精致优化 */
+        @media (max-width: 480px) {
+            .main-nav {
+                width: 98%;
+                padding: 10px 12px;
+                border-radius: 18px;
+                top: 12px;
+            }
+
+            .nav-links {
+                gap: 4px;
+            }
+
+            .nav-item {
+                font-size: 12px;
+                padding: 10px 6px;
+                border-radius: 14px;
+                min-width: 0;
+            }
+
+            .nav-item.active {
+                transform: translateY(-1px) scale(1.01);
+                box-shadow:
+                    0 6px 16px rgba(59, 130, 246, 0.3),
+                    0 3px 8px rgba(37, 99, 235, 0.2);
+            }
+
+            .nav-item.active:hover {
+                transform: translateY(-2px) scale(1.02);
+            }
+
+            /* 移动端控制按钮优化 */
+            .top-right-controls {
+                top: 14px;
+                right: 14px;
+                gap: 8px;
+                padding: 8px 12px;
+                border-radius: 20px;
+            }
+
+            .controls-trigger {
+                width: 90px;
+                height: 50px;
+            }
+
+            #languageToggle {
+                padding: 8px 12px;
+                font-size: 11px;
+                border-radius: 18px;
+            }
+
+            .theme-switch {
+                width: 44px;
+                height: 22px;
+            }
+
+            .theme-switch-icon {
+                width: 22px;
+                height: 22px;
+                font-size: 11px;
+            }
+
+            .theme-switch-slider {
+                width: 22px;
+                height: 22px;
+            }
+
+            [data-theme="dark"] .theme-switch-slider {
+                transform: translateX(22px);
+            }
+
+            .theme-switch-wrapper:hover .theme-switch-slider {
+                transform: scale(1.05);
+            }
+
+            [data-theme="dark"] .theme-switch-wrapper:hover .theme-switch-slider {
+                transform: translateX(22px) scale(1.05);
+            }
+        }
+
+        /* 🎭 高端微交互动画 */
+        @keyframes luxuryFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+                filter: blur(2px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes navItemPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+            }
+        }
+
+        .top-right-controls.show {
+            animation: luxuryFadeInUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* 导航项点击脉冲效果 */
+        .nav-item.pulse {
+            animation: navItemPulse 0.6s ease-out;
+        }
+
+        /* 🎯 精致按钮点击反馈 */
+        #languageToggle:active {
+            transform: translateY(0) scale(0.96);
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-switch-wrapper:active {
+            transform: translateY(0) scale(0.96);
+        }
+
+        .nav-item:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        /* 性能优化 - GPU加速 */
+        .main-nav,
+        .nav-item,
+        .theme-switch-slider,
+        #languageToggle,
+        .theme-switch-wrapper {
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* 减少重绘 */
+        .nav-item::before,
+        .nav-item.active::before,
+        .nav-item.active::after {
+            will-change: transform, opacity;
+        }
+
+        /* 区域标题样式更新 */
+        .section-title {
+            color: var(--section-title);
+        }
+
+        .section-subtitle {
+            color: var(--section-subtitle);
+        }
+
+        /* 图片卡片样式更新 */
+        .gallery-item {
+            background: var(--card-bg);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item .item-content {
+            background: var(--card-bg);
+            color: var(--gallery-text);
+        }
+
+        .gallery-item:hover .item-content {
+            background: var(--gallery-hover);
+            color: #ffffff;
+        }
+
+        .gallery-item h3 {
+            color: var(--gallery-text);
+        }
+
+        .gallery-item p {
+            color: var(--text-secondary);
+        }
+
+        .gallery-item:hover h3,
+        .gallery-item:hover p {
+            color: #ffffff;
+        }
+
+        /* 按钮样式更新 */
+        .more-btn {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .more-btn:hover {
+            background: var(--hover-bg);
+        }
+
+        /* 页脚样式更新 */
+        .footer {
+            background: var(--footer-bg);
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .footer-section h3,
+        [data-theme="dark"] .footer-section a,
+        [data-theme="dark"] .company-info p,
+        [data-theme="dark"] .copyright,
+        [data-theme="dark"] .payment-methods span {
+            color: #ffffff;
+        }
+
+        [data-theme="dark"] .footer-section a:hover {
+            color: #cccccc;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--section-title);
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--link-color);
+        }
+
+        .company-info p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .newsletter-form input {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        [data-theme="dark"] .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .subscribe-btn {
+            padding: 8px 16px;
+            background: var(--link-color);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .payment-methods {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        /* ... 之前样式 ... */
+        .footer-dark-simple {
+          background: #232323;
+          color: #fff;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+        }
+        .footer-dark-marquee {
+          width: 100%;
+          overflow: hidden;
+          background: #181818;
+          border: none;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-top: 32px;
+          margin-bottom: 32px;
+          box-sizing: border-box;
+        }
+        .footer-dark-marquee-inner {
+          display: flex;
+          white-space: nowrap;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #fff;
+          letter-spacing: 2.5px;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          animation: footerMarquee 18s linear infinite;
+          align-items: center;
+          height: 100%;
+        }
+        .footer-dark-marquee-inner span {
+          display: inline-block;
+          padding-right: 48px;
+        }
+        @keyframes footerMarquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @media (max-width: 700px) {
+          .footer-dark-marquee {
+            height: 36px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+          }
+          .footer-dark-marquee-inner {
+            font-size: 1rem;
+          }
+          .footer-dark-marquee-inner span {
+            padding-right: 24px;
+          }
+        }
+        .footer-dark-button-row {
+          text-align: center;
+          padding: 64px 0 32px 0;
+        }
+        .footer-dark-button-row span {
+          font-size: 5rem;
+          font-weight: 900;
+          color: #fff;
+          letter-spacing: 14px;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        }
+        .footer-dark-copyright {
+          text-align: center;
+          color: #bbb;
+          font-size: 1.1rem;
+          letter-spacing: 2px;
+          padding-bottom: 32px;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --- Footer Complex & Simple 优化样式 --- */
+        .footer-dark-complex {
+          background: #232323;
+          color: #fff;
+          padding: 0 0 32px 0;
+          font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+          border-bottom: 1px solid #333;
+        }
+        .footer-dark-main {
+          display: grid;
+          grid-template-columns: 1fr 1fr auto;
+          gap: 60px;
+          max-width: 1400px;
+          margin: 0 auto;
+          align-items: flex-start;
+          padding: 64px 40px 32px 40px;
+        }
+        .footer-dark-col {
+          min-width: 180px;
+          margin-bottom: 24px;
+        }
+        .footer-dark-col.subscribe-col {
+          grid-column: 1;
+        }
+        .footer-dark-title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 18px;
+          letter-spacing: 1.5px;
+          line-height: 1.2;
+          color: #fff;
+        }
+        .footer-dark-form {
+          display: flex;
+          gap: 0;
+          margin-bottom: 12px;
+        }
+        .footer-dark-form input {
+          background: transparent;
+          border: 1.5px solid #555;
+          border-radius: 32px 0 0 32px;
+          color: #fff;
+          padding: 12px 20px;
+          font-size: 1.1rem;
+          outline: none;
+          width: 180px;
+        }
+        .footer-dark-form input::placeholder {
+          color: #aaa;
+        }
+        .footer-dark-btn {
+          background: #fff;
+          color: #232323;
+          border: none;
+          border-radius: 0 32px 32px 0;
+          padding: 0 24px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+        .footer-dark-btn:hover {
+          background: #e5e5e5;
+        }
+        .footer-dark-col ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .footer-dark-col li {
+          margin-bottom: 12px;
+        }
+        .footer-dark-col a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.05rem;
+          opacity: 0.85;
+          transition: opacity 0.2s;
+        }
+        .footer-dark-col a:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+
+        .footer-dark-col .company-info {
+          margin-top: 0;
+        }
+
+        .footer-dark-col .company-info p {
+          color: #fff;
+          font-size: 1.05rem;
+          opacity: 0.85;
+          margin-bottom: 12px;
+          line-height: 1.5;
+        }
+        .footer-dark-social {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 18px;
+          justify-content: flex-start;
+          grid-column: 5;
+          justify-self: end;
+          align-self: start;
+        }
+        .footer-dark-social-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          color: #232323;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-right: 0;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .footer-dark-social-icon::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+        }
+
+        .footer-dark-social-icon:hover::before {
+          transform: translateX(100%);
+        }
+
+        .footer-dark-social-icon:hover {
+          background: #e5e5e5;
+          color: #000;
+          transform: translateY(-2px) scale(1.05);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .footer-dark-social-icon.facebook:hover {
+          background: #1877f2;
+          color: white;
+        }
+
+        .footer-dark-social-icon.instagram:hover {
+          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+          color: white;
+        }
+
+        .footer-dark-social-icon.wechat:hover {
+          background: #07c160;
+          color: white;
+        }
+
+        .footer-dark-social-icon.xiaohongshu:hover {
+          background: #ff2442;
+          color: white;
+        }
+
+        .footer-dark-social-icon.xiaohongshu:hover .xiaohongshu-text {
+          fill: white !important;
+        }
+
+        .footer-dark-social-icon.whatsapp:hover {
+          background: #25d366;
+          color: white;
+        }
+
+        .footer-dark-social-icon svg {
+          width: 20px;
+          height: 20px;
+          display: block;
+          z-index: 1;
+          position: relative;
+        }
+
+
+        @media (max-width: 900px) {
+          .footer-dark-main {
+            grid-template-columns: 1fr;
+            gap: 32px;
+            text-align: center;
+            padding: 40px 20px 32px 20px;
+          }
+          .footer-dark-col {
+            min-width: 0;
+            width: 100%;
+            text-align: center;
+          }
+          .footer-dark-col.subscribe-col {
+            grid-column: 1;
+          }
+          .footer-dark-social {
+            grid-column: 1;
+            justify-self: center;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 20px;
+          }
+          .footer-dark-title {
+            font-size: 1.4rem;
+          }
+        }
+        .footer-dark-simple {
+          background: #232323;
+          color: #fff;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          border-top: 1px solid #333;
+        }
+        .footer-dark-marquee {
+          width: 100%;
+          overflow: hidden;
+          background: #181818;
+          border: none;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-top: 0;
+          margin-bottom: 32px;
+          box-sizing: border-box;
+        }
+        .footer-dark-marquee-inner {
+          display: flex;
+          white-space: nowrap;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #fff;
+          letter-spacing: 2.5px;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          animation: footerMarquee 18s linear infinite;
+          align-items: center;
+          height: 100%;
+        }
+        .footer-dark-marquee-inner span {
+          display: inline-block;
+          padding-right: 48px;
+        }
+        @keyframes footerMarquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .footer-dark-button-row {
+          text-align: center;
+          padding: 64px 0 32px 0;
+        }
+        .footer-dark-button-row span {
+          font-size: 10rem;
+          font-weight: 900;
+          color: #fff;
+          letter-spacing: 28px;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        }
+        .footer-dark-copyright {
+          text-align: center;
+          color: #bbb;
+          font-size: 0.77rem;
+          letter-spacing: 1.4px;
+          padding-bottom: 32px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        @media (max-width: 700px) {
+          .footer-dark-marquee {
+            height: 36px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+          }
+          .footer-dark-marquee-inner {
+            font-size: 1rem;
+          }
+          .footer-dark-marquee-inner span {
+            padding-right: 24px;
+          }
+          .footer-dark-button-row span {
+            font-size: 5rem;
+            letter-spacing: 12px;
+          }
+          .footer-dark-button-row {
+            padding: 36px 0 18px 0;
+          }
+          .footer-dark-copyright {
+            font-size: 0.665rem;
+            padding-bottom: 18px;
+          }
+        }
+
+        /* 🍔 汉堡菜单样式 */
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+        }
+
+        .hamburger-icon span {
+            width: 20px;
+            height: 2px;
+            background: #333;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        /* 汉堡菜单动画 */
+        .hamburger-menu.active .hamburger-icon span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-menu.active .hamburger-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .hamburger-icon span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* 菜单遮罩层 */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 菜单面板 */
+        .menu-panel {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            z-index: 999;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+            overflow-y: auto;
+        }
+
+        .menu-panel.active {
+            left: 0;
+        }
+
+        /* 菜单头部 */
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 20px;
+            border-bottom: 1px solid #e9ecef;
+            background: linear-gradient(135deg, #c9a96e 0%, #d4af37 100%);
+            color: white;
+        }
+
+        .menu-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .menu-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* 菜单导航 */
+        .menu-nav {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .menu-item:hover::before {
+            left: 100%;
+        }
+
+        .menu-item:hover {
+            background: rgba(201, 169, 110, 0.08);
+            border-left-color: #c9a96e;
+            transform: translateX(8px);
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .menu-text {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                top: 16px;
+                left: 16px;
+                padding: 10px;
+            }
+
+            .menu-panel {
+                width: 280px;
+                left: -280px;
+            }
+
+            .menu-header {
+                padding: 20px 16px;
+            }
+
+            .menu-item {
+                padding: 14px 16px;
+            }
+
+            .menu-text {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-panel {
+                width: 100%;
+                left: -100%;
+            }
+        }
+
+        /* 暗色主题适配 */
+        [data-theme="dark"] .hamburger-menu {
+            background: rgba(26, 26, 26, 0.95);
+        }
+
+        [data-theme="dark"] .hamburger-icon span {
+            background: #fff;
+        }
+
+        [data-theme="dark"] .menu-panel {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+        }
+
+        [data-theme="dark"] .menu-item {
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .menu-item:hover {
+            background: rgba(244, 228, 188, 0.1);
+            border-left-color: #f4e4bc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 汉堡菜单按钮 -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="hamburger-icon" onclick="toggleHamburgerMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- 伸缩菜单面板 -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeHamburgerMenu()"></div>
+    <div class="menu-panel" id="menuPanel">
+        <div class="menu-header">
+            <h3>菜单</h3>
+            <button type="button" class="menu-close" onclick="closeHamburgerMenu()">×</button>
+        </div>
+        <nav class="menu-nav">
+            <a href="about.html" class="menu-item">
+                <span class="menu-icon">🏢</span>
+                <span class="menu-text">关于合盛</span>
+            </a>
+            <a href="inquiry.html" class="menu-item">
+                <span class="menu-icon">💬</span>
+                <span class="menu-text">在线询盘</span>
+            </a>
+            <a href="regulations.html" class="menu-item">
+                <span class="menu-icon">⚖️</span>
+                <span class="menu-text">行业法律</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- 小巧语言切换按钮 -->
+    <div class="language-toggle-mini" id="languageToggleMini" onclick="toggleLanguageMini()">
+        <span id="languageTextMini">中/EN</span>
+    </div>
+
+    <!-- 居中大气Logo区块 -->
+    <div class="logo-center">
+        <img src="assets/images/logo.png" alt="Logo" class="logo-center-img" />
+        <div class="logo-center-title-en">HESHENG BUTTON FACTORY</div>
+        <div class="logo-center-subtitle">BUTTONS & CRAFTS</div>
+    </div>
+    <!-- 主要内容区域 -->
+    <section class="hero-section">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-image">
+                        <img src="assets/images/banner1.jpg" alt="合盛钮扣展示1">
+                    </div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-image">
+                        <img src="assets/images/banner2.jpg" alt="合盛钮扣展示2">
+                    </div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-image">
+                        <img src="assets/images/banner3.jpg" alt="合盛钮扣展示3">
+                    </div>
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+            <!-- 轮播指示器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 轮播导航箭头 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="pickup" class="gallery-section">
+        <h2 class="section-title" data-translate="pickup_title">锦扣匠制</h2>
+        <h3 class="section-subtitle" data-translate="pickup_subtitle">PICK UP</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup1.jpg" alt="推荐产品 1" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup1_name">优雅金属扣</h3>
+                    <p data-translate="pickup1_desc">经典设计，永不过时。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup2.jpg" alt="推荐产品 2" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup2_name">天然木质扣</h3>
+                    <p data-translate="pickup2_desc">环保材质，自然纹理。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup3.jpg" alt="推荐产品 3" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup3_name">时尚树脂扣</h3>
+                    <p data-translate="pickup3_desc">色彩丰富，造型多样。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup4.jpg" alt="推荐产品 4" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup4_name">复古贝壳扣</h3>
+                    <p data-translate="pickup4_desc">光泽独特，品味之选。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup5.jpg" alt="推荐产品 5" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup5_name">珍珠母贝扣</h3>
+                    <p data-translate="pickup5_desc">自然光泽，高贵典雅。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup6.jpg" alt="推荐产品 6" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup6_name">水晶玻璃扣</h3>
+                    <p data-translate="pickup6_desc">晶莹剔透，璀璨夺目。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup7.jpg" alt="推荐产品 7" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup7_name">编织皮革扣</h3>
+                    <p data-translate="pickup7_desc">质感独特，时尚百搭。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup8.jpg" alt="推荐产品 8" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup8_name">青铜复古扣</h3>
+                    <p data-translate="pickup8_desc">古韵悠长，岁月沉淀。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup9.jpg" alt="推荐产品 9" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup9_name">彩绘陶瓷扣</h3>
+                    <p data-translate="pickup9_desc">手工绘制，独一无二。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup10.jpg" alt="推荐产品 10" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup10_name">竹编纽扣</h3>
+                    <p data-translate="pickup10_desc">天然环保，清新雅致。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup11.jpg" alt="推荐产品 11" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup11_name">琉璃宝石扣</h3>
+                    <p data-translate="pickup11_desc">色彩斑斓，富贵华丽。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/pickup12.jpg" alt="推荐产品 12" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="pickup12_name">镂空雕花扣</h3>
+                    <p data-translate="pickup12_desc">精致工艺，匠心独运。</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-more">
+            <a href="#" class="more-btn" data-translate="more_button">MORE</a>
+        </div>
+    </section>
+
+    <section id="new-product" class="gallery-section">
+        <h2 class="section-title" data-translate="new_product_title">最新产品</h2>
+        <h3 class="section-subtitle" data-translate="new_product_subtitle">NEW PRODUCT</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/new1.jpg" alt="最新产品 1" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="newprod1_name">水晶镶嵌扣</h3>
+                    <p data-translate="newprod1_desc">闪耀夺目，点亮设计。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/new2.jpg" alt="最新产品 2" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="newprod2_name">皮革拼接扣</h3>
+                    <p data-translate="newprod2_desc">质感碰撞，个性十足。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/new3.jpg" alt="最新产品 3" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="newprod3_name">迷你系列扣</h3>
+                    <p data-translate="newprod3_desc">小巧精致，细节加分。</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/new4.jpg" alt="最新产品 4" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="newprod4_name">环保再生材料扣</h3>
+                    <p data-translate="newprod4_desc">可持续时尚的新选择。</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-more">
+            <a href="#" class="more-btn" data-translate="more_button">MORE</a>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title" data-translate="gallery_title">精工智造</h2>
+        <h3 class="section-subtitle" data-translate="gallery_subtitle">GALLERY</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/gallery-long-1.jpg" alt="精工智造 长图1" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="gallery_item1_title">创意作品集锦</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/gallery-long-2.jpg" alt="精工智造 长图2" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="gallery_item2_title">匠心独运系列</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/gallery-long-3.jpg" alt="精工智造 长图3" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="gallery_item3_title">设计师合作款</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="assets/images/gallery-long-4.jpg" alt="精工智造 长图4" loading="lazy">
+                </div>
+                <div class="item-content">
+                    <h3 data-translate="gallery_item4_title">客户定制案例</h3>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-more">
+                       <a href="#" class="more-btn" data-translate="more_button">MORE</a>
+        </div>
+    </section>
+
+
+    <!-- 页脚区块 -->
+    <footer class="footer-dark-complex">
+      <div class="footer-dark-marquee">
+        <div class="footer-dark-marquee-inner">
+          <span>-GET IN TOUCH GET IN TOUCH GET IN TOUCH-GET IN TOUCH GET IN TOUCH GET IN TOUCH-</span>
+          <span>-GET IN TOUCH GET IN TOUCH GET IN TOUCH-GET IN TOUCH GET IN TOUCH GET IN TOUCH-</span>
+        </div>
+      </div>
+      <div class="footer-dark-main">
+        <div class="footer-dark-col">
+          <div class="footer-dark-title">公司信息</div>
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">产品系列</a></li>
+            <li><a href="#">钮扣市集</a></li>
+            <li><a href="#">我们的故事</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">主题特色</a></li>
+          </ul>
+        </div>
+        <div class="footer-dark-col">
+          <div class="footer-dark-title">合盛钮扣厂</div>
+          <div class="company-info">
+            <p>广东省东莞市凤岗镇凤德岭凤鸣路36号</p>
+            <p>邮编：523692</p>
+            <p>营业时间：07:00-20:00</p>
+            <p>休息日：无休息日</p>
+          </div>
+        </div>
+        <div class="footer-dark-social">
+          <a href="https://www.facebook.com/hesheng.button?mibextid=wwXIfr" class="footer-dark-social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/heshengbotton?igsh=MW16cmVwdWo5Z2Nx&utm_source=qr" class="footer-dark-social-icon instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="assets/wechat-qr.html" class="footer-dark-social-icon wechat" aria-label="WeChat" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-3.72 0-6.73 2.741-6.73 6.12 0 1.747.75 3.333 2.001 4.459a.875.875 0 0 1 .313.991l-.343 1.298a.48.48 0 0 0-.049.186c0 .142.11.26.246.26a.284.284 0 0 0 .147-.05l1.674-.96a.78.78 0 0 1 .628-.089c.607.169 1.232.257 1.856.257 3.72 0 6.73-2.741 6.73-6.12s-3.01-6.352-6.473-6.352zm-3.378 4.393c.53 0 .959.439 .959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98zm4.378 0c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98z"/>
+            </svg>
+          </a>
+          <a href="https://www.xiaohongshu.com/user/profile/5f940936000000000101dc00?xsec_token=YB5-wR9amiwNFZ4PjDV2jzyEUgaeNRjkuNuoeIsskUv_c=&xsec_source=app_share&xhsshare=CopyLink&appuid=5f940936000000000101dc00&apptime=1749114355&share_id=d341bd710594482683371a0d619e5bde" class="footer-dark-social-icon xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <text x="12" y="14" text-anchor="middle" fill="currentColor" font-size="8" font-weight="bold" font-family="Arial, sans-serif" class="xiaohongshu-text">小红书</text>
+            </svg>
+          </a>
+          <a href="assets/whatsapp-qr.html" class="footer-dark-social-icon whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-dark-button-row">
+        <span>BUTTON</span>
+      </div>
+      <div class="footer-dark-copyright">
+        © 2025. HESHENG
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/cdn-loader.js"></script>
+    <script>
+        // 初始化轮播图
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSwiper = new Swiper('.hero-swiper', {
+                // 轮播配置
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000,
+
+                // 分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // 导航箭头
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // 响应式断点
+                breakpoints: {
+                    768: {
+                        autoplay: {
+                            delay: 6000,
+                        },
+                    }
+                }
+            });
+
+            // 图片懒加载优化
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.remove('lazy');
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px',
+                    threshold: 0.01
+                });
+
+                // 观察所有gallery图片
+                document.querySelectorAll('.gallery-item img').forEach(img => {
+                    img.classList.add('lazy');
+                    imageObserver.observe(img);
+                });
+            }
+
+            // 图片加载动画
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // 响应式图片质量优化
+            function optimizeImageQuality() {
+                const pixelRatio = window.devicePixelRatio || 1;
+                const images = document.querySelectorAll('.gallery-item img');
+
+                images.forEach(img => {
+                    if (pixelRatio > 1.5) {
+                        // 高分辨率屏幕使用高质量图片
+                        img.style.imageRendering = 'crisp-edges';
+                    }
+                });
+            }
+
+            optimizeImageQuality();
+            window.addEventListener('resize', optimizeImageQuality);
+
+            // 初始化汉堡菜单
+            initHamburgerMenu();
+        });
+
+        // 🍔 汉堡菜单功能
+        function toggleHamburgerMenu() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const menuPanel = document.getElementById('menuPanel');
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            hamburgerMenu.classList.toggle('active');
+            menuPanel.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+
+            // 防止背景滚动
+            if (menuPanel.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeHamburgerMenu() {
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const menuPanel = document.getElementById('menuPanel');
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            hamburgerMenu.classList.remove('active');
+            menuPanel.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function initHamburgerMenu() {
+            // ESC键关闭菜单
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeHamburgerMenu();
+                }
+            });
+
+            // 菜单项点击动画
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // 添加点击动画
+                    this.style.transform = 'translateX(12px) scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        }
+    </script>
+    <script type="module">
+        // 🌐 小巧语言切换功能
+        let currentLanguage = 'zh';
+        let isLanguageToggleUsed = false;
+
+        function toggleLanguageMini() {
+            const toggleButton = document.getElementById('languageToggleMini');
+            const textElement = document.getElementById('languageTextMini');
+
+            // 切换语言
+            currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+            isLanguageToggleUsed = true;
+
+            // 更新按钮文本
+            if (currentLanguage === 'zh') {
+                textElement.textContent = '中/EN';
+            } else {
+                textElement.textContent = 'EN/中';
+            }
+
+            // 添加点击动画
+            toggleButton.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                toggleButton.style.transform = 'scale(1)';
+            }, 150);
+
+            // 这里可以调用实际的语言切换逻辑
+            // 如果有现有的语言切换函数，可以在这里调用
+            try {
+                // 尝试调用现有的语言切换功能
+                if (typeof toggleLanguage === 'function') {
+                    toggleLanguage();
+                }
+            } catch (error) {
+                console.log('Language toggle function not available yet');
+            }
+
+            // 3秒后自动隐藏按钮
+            setTimeout(() => {
+                if (isLanguageToggleUsed) {
+                    hideLanguageToggle();
+                }
+            }, 3000);
+        }
+
+        function hideLanguageToggle() {
+            const toggleButton = document.getElementById('languageToggleMini');
+            toggleButton.classList.add('hiding');
+
+            // 完全隐藏后移除元素
+            setTimeout(() => {
+                toggleButton.style.display = 'none';
+            }, 300);
+        }
+
+        // 将函数添加到全局作用域
+        window.toggleLanguageMini = toggleLanguageMini;
+
+        // 等待模块加载完成
+        async function init() {
+            try {
+                console.log('Initializing application...');
+
+                // 调用nav.js中的loadNavigation处理通用导航逻辑（如active类）
+                const { loadNavigation } = await import('./assets/js/nav.js');
+                // console.log('Navigation module loaded for active link setting');
+                await loadNavigation();
+                // console.log('Active link setting attempted by nav.js');
+
+                // 页面特定初始化：语言和主题
+                const { initializeLanguage, toggleLanguage } = await import('./assets/js/language.js');
+                const { initThemeSwitch } = await import('./assets/js/theme.js');
+
+                await initializeLanguage();
+                initThemeSwitch();
+                // console.log('Language and Theme initialized by page script');
+
+                const langToggle = document.getElementById('languageToggle');
+                if (langToggle) {
+                    // console.log('Found language toggle button in page, binding click event');
+                    langToggle.addEventListener('click', toggleLanguage);
+                } else {
+                    console.warn('Language toggle button not found in page script for index.html');
+                }
+
+                // 🎨 初始化高端导航效果
+                addNavItemEffects();
+                initControlsVisibility();
+            } catch (error) {
+                console.error('Error initializing:', error);
+            }
+        }
+
+        // 🎨 高端导航栏滚动效果
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.main-nav');
+
+            // 清除之前的超时
+            clearTimeout(scrollTimeout);
+
+            if (window.scrollY > 30) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                // 延迟移除类，避免频繁切换
+                scrollTimeout = setTimeout(() => {
+                    nav.classList.remove('nav-scrolled');
+                }, 100);
+            }
+        });
+
+        // 🎯 导航项点击脉冲效果
+        function addNavItemEffects() {
+            const navItems = document.querySelectorAll('.nav-item');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // 添加脉冲效果
+                    this.classList.add('pulse');
+
+                    // 移除其他项的活跃状态
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // 添加活跃状态
+                    this.classList.add('active');
+
+                    // 清除脉冲效果
+                    setTimeout(() => {
+                        this.classList.remove('pulse');
+                    }, 600);
+                });
+
+                // 悬停时的光泽扫过效果
+                item.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.setProperty('--hover-delay', '0s');
+                    }
+                });
+            });
+        }
+
+        // 控制按钮显示/隐藏逻辑
+        function initControlsVisibility() {
+            const controlsTrigger = document.querySelector('.controls-trigger');
+            const topRightControls = document.querySelector('.top-right-controls');
+            let hideTimeout;
+
+            // 鼠标进入触发区域
+            controlsTrigger.addEventListener('mouseenter', () => {
+                clearTimeout(hideTimeout);
+                topRightControls.classList.add('show');
+            });
+
+            // 鼠标离开触发区域
+            controlsTrigger.addEventListener('mouseleave', () => {
+                hideTimeout = setTimeout(() => {
+                    if (!topRightControls.matches(':hover')) {
+                        topRightControls.classList.remove('show');
+                    }
+                }, 300);
+            });
+
+            // 鼠标进入控制按钮区域
+            topRightControls.addEventListener('mouseenter', () => {
+                clearTimeout(hideTimeout);
+                topRightControls.classList.add('show');
+            });
+
+            // 鼠标离开控制按钮区域
+            topRightControls.addEventListener('mouseleave', () => {
+                hideTimeout = setTimeout(() => {
+                    topRightControls.classList.remove('show');
+                }, 300);
+            });
+
+            // 点击页面其他地方隐藏
+            document.addEventListener('click', (e) => {
+                if (!topRightControls.contains(e.target) && !controlsTrigger.contains(e.target)) {
+                    topRightControls.classList.remove('show');
+                }
+            });
+        }
+
+        // 全站主题切换功能
+        function initThemeSwitcher() {
+            const bgOptions = document.querySelectorAll('.bg-option');
+            const body = document.body;
+
+            // 主题配置
+            const themes = {
+                default: {
+                    name: 'minimal',
+                    background: {
+                        before: `
+                            radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.005) 0%, transparent 50%),
+                            linear-gradient(0deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%),
+                            linear-gradient(90deg, transparent 98%, rgba(0, 0, 0, 0.01) 100%)
+                        `,
+                        size: '400px 400px, 300px 300px, 20px 20px, 20px 20px'
+                    }
+                },
+                luxury: {
+                    name: 'luxury',
+                    background: {
+                        before: `
+                            radial-gradient(ellipse at 30% 20%, rgba(218, 165, 32, 0.12) 0%, transparent 60%),
+                            radial-gradient(ellipse at 70% 80%, rgba(184, 134, 11, 0.08) 0%, transparent 60%),
+                            linear-gradient(45deg, rgba(218, 165, 32, 0.03) 0%, transparent 25%, rgba(218, 165, 32, 0.03) 50%, transparent 75%),
+                            radial-gradient(circle at 50% 50%, rgba(139, 69, 19, 0.02) 0%, transparent 70%)
+                        `,
+                        size: '800px 600px, 600px 800px, 60px 60px, 1000px 1000px'
+                    }
+                },
+                geometric: {
+                    name: 'geometric',
+                    background: {
+                        before: `
+                            linear-gradient(30deg, transparent 40%, rgba(52, 152, 219, 0.02) 41%, rgba(52, 152, 219, 0.02) 42%, transparent 43%),
+                            linear-gradient(150deg, transparent 40%, rgba(44, 62, 80, 0.015) 41%, rgba(44, 62, 80, 0.015) 42%, transparent 43%),
+                            linear-gradient(45deg, transparent 48%, rgba(52, 152, 219, 0.008) 49%, rgba(52, 152, 219, 0.008) 51%, transparent 52%),
+                            radial-gradient(circle at 25% 75%, rgba(52, 152, 219, 0.03) 0%, transparent 50%)
+                        `,
+                        size: '120px 120px, 120px 120px, 40px 40px, 600px 600px'
+                    }
+                }
+            };
+
+            // 应用主题
+            function applyTheme(themeKey) {
+                const theme = themes[themeKey];
+                if (!theme) return;
+
+                // 移除所有主题类
+                body.classList.remove('theme-minimal', 'theme-luxury', 'theme-geometric');
+
+                // 添加新主题类
+                body.classList.add(`theme-${theme.name}`);
+
+                // 更新背景
+                let dynamicStyle = document.getElementById('dynamic-theme-style');
+                if (!dynamicStyle) {
+                    dynamicStyle = document.createElement('style');
+                    dynamicStyle.id = 'dynamic-theme-style';
+                    document.head.appendChild(dynamicStyle);
+                }
+
+                dynamicStyle.textContent = `
+                    body::before {
+                        background: ${theme.background.before} !important;
+                        background-size: ${theme.background.size} !important;
+                    }
+                `;
+
+                // 添加主题切换动画
+                body.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+
+                // 触发所有交互元素的重新渲染
+                triggerElementsUpdate();
+            }
+
+            // 触发元素更新动画
+            function triggerElementsUpdate() {
+                // 添加全局切换动画类
+                body.classList.add('theme-switching');
+
+                // 波纹效果
+                const elements = document.querySelectorAll('.nav-item, .gallery-item, .more-btn, .subscribe-btn');
+                elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        // 添加波纹效果
+                        el.classList.add('ripple-effect', 'ripple-active');
+
+                        // 轻微缩放动画
+                        el.style.transform = 'scale(1.02)';
+
+                        setTimeout(() => {
+                            el.style.transform = '';
+                            el.classList.remove('ripple-active');
+                        }, 300);
+
+                        setTimeout(() => {
+                            el.classList.remove('ripple-effect');
+                        }, 600);
+                    }, index * 30);
+                });
+
+                // 移除全局动画类
+                setTimeout(() => {
+                    body.classList.remove('theme-switching');
+                }, 1000);
+            }
+
+            // 添加按钮点击反馈
+            function addButtonFeedback() {
+                const buttons = document.querySelectorAll('.nav-item, .more-btn, .subscribe-btn, #languageToggle, .theme-switch-wrapper');
+
+                buttons.forEach(button => {
+                    button.addEventListener('mousedown', function(e) {
+                        this.style.transform = 'scale(0.98)';
+                    });
+
+                    button.addEventListener('mouseup', function(e) {
+                        this.style.transform = '';
+                    });
+
+                    button.addEventListener('mouseleave', function(e) {
+                        this.style.transform = '';
+                    });
+                });
+            }
+
+            // 绑定点击事件
+            bgOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    // 添加点击动画
+                    option.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        option.style.transform = '';
+                    }, 150);
+
+                    // 更新活跃状态
+                    bgOptions.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+
+                    // 应用主题
+                    const themeKey = option.dataset.bg;
+                    applyTheme(themeKey);
+
+                    // 保存选择
+                    localStorage.setItem('selectedTheme', themeKey);
+                });
+            });
+
+            // 加载保存的主题
+            const savedTheme = localStorage.getItem('selectedTheme') || 'default';
+            const savedOption = document.querySelector(`[data-bg="${savedTheme}"]`);
+            if (savedOption) {
+                bgOptions.forEach(opt => opt.classList.remove('active'));
+                savedOption.classList.add('active');
+                applyTheme(savedTheme);
+            }
+
+            // 初始化按钮反馈
+            addButtonFeedback();
+        }
+
+        // 确保在DOM加载完成后初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                init();
+                initControlsVisibility();
+                initThemeSwitcher();
+            });
+        } else {
+            init();
+            initControlsVisibility();
+            initThemeSwitcher();
+        }
+    </script>
+
+<script type="application/ld+json">
+</script>
+</body>
+</html>

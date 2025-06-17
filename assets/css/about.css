@@ -1,0 +1,553 @@
+/* 常见问题样式 */
+.faq-section {
+    padding: 60px 0;
+    background: #f8f8f8;
+}
+
+.faq-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.faq-answer {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .faq-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 导航按钮样式 */
+.about-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.about-nav.prev {
+    left: -20px;
+}
+
+.about-nav.next {
+    right: -20px;
+}
+
+.about-nav:hover {
+    background: rgba(255,255,255,1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .about-container {
+        width: 95%;
+    }
+    
+    .about-item {
+        flex: 0 0 280px;
+        min-width: 280px;
+    }
+    
+    .about-item img {
+        height: 350px;
+    }
+    
+    .about-nav {
+        display: none;
+    }
+}
+
+/* 关于页面样式 */
+.about-content {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.about-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    padding: 20px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--section-title);
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.about-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.about-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-nav.prev {
+    left: 20px;
+}
+
+.about-nav.next {
+    right: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-item img {
+        height: 250px;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .about-nav {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* FAQ页面样式 */
+.faq-page {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.faq-main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.faq-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.faq-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-category {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.faq-category h2 {
+    padding: 20px;
+    margin: 0;
+    background: #f8f8f8;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.faq-list {
+    padding: 0 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    padding-right: 30px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-bottom: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .faq-page {
+        margin: 30px auto;
+    }
+    
+    .faq-main-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 询问页面样式 */
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 40px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.contact-description {
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.required {
+    color: #ff0000;
+    margin-left: 3px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-notice {
+    margin: 30px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 60px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+    
+    .contact-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-description {
+        margin-bottom: 30px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+/* 服务条款页面样式 */
+.terms-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.terms-container {
+    background: #fff;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.terms-content {
+    color: #333;
+    line-height: 1.8;
+}
+
+.terms-intro {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.terms-section {
+    margin-bottom: 30px;
+}
+
+.terms-section h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.terms-section ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terms-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.terms-section ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 20px;
+    }
+    
+    .terms-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+/* 隐私政策页面样式 */
+.privacy-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+}
+
+.privacy-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.privacy-content {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.privacy-intro {
+    margin-bottom: 40px;
+}
+
+.privacy-section {
+    margin-bottom: 30px;
+}
+
+.privacy-section h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.privacy-section p {
+    margin-bottom: 15px;
+}
+
+.privacy-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+}
+
+.privacy-section li {
+    margin-bottom: 10px;
+}

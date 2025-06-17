@@ -1,0 +1,1389 @@
+/* assets/css/main.css */
+/* 注意：CSS变量现在统一定义在 theme.css 中 */
+
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* 通用容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 基础导航样式 - 详细样式在 index.html 内联样式中定义 */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 页脚样式 */
+.site-footer {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+/* 新闻通讯表单 */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-speed);
+}
+
+.subscribe-btn:hover {
+    background-color: #1a4bcc;
+}
+
+/* Logo 和导航栏样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-primary);
+    font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(44,44,44,0.08);
+    background: #fff;
+    object-fit: cover;
+}
+
+.nav-icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+}
+
+/* 暗色主题特定样式 - 主要变量在 theme.css 中定义 */
+[data-theme="dark"] .newsletter-form input[type="email"] {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* 性能优化 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    .site-footer,
+    .newsletter-form,
+    .nav-container {
+        display: none;
+    }
+}
+
+/* 增强的重置样式 */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* 更新body样式以合并重复定义 */
+body {
+    font-family: 'Montserrat', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 更新图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 更新链接样式 */
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--link-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500; /* 标题默认字重 */
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+/* 2. 辅助类 (Utility Classes) */
+.text-center {
+    text-align: center;
+}
+
+/* 3. Logo 和导航栏 */
+.logo-container {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* 移除重复的导航样式 - 主要导航样式在 index.html 中定义 */
+
+#languageToggle {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-left: 15px; /* 调整与导航项的间距 */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#languageToggle:hover {
+    background-color: #f0f0f0;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #333;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* 当菜单打开时的样式 */
+.mobile-nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 移动端导航样式已在 index.html 中定义，避免重复 */
+
+
+/* 4. 全屏轮播 (Swiper) */
+.main-slider {
+    width: 100%;
+    height: 60vh; /* 调整轮播图高度，例如视口高度的60% */
+    min-height: 400px; /* 最小高度 */
+    max-height: 700px; /* 最大高度 */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 为了定位文字说明 */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 10%; /* 调整文字位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.slide-caption h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.slide-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Swiper 导航按钮和分页器颜色调整 */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff; /* 箭头颜色 */
+    background-color: rgba(0,0,0,0.3); /* 箭头背景 */
+    padding: 10px;
+    border-radius: 50%;
+    width: 44px; /* 确保背景区域足够 */
+    height: 44px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px; /* 箭头图标大小 */
+}
+
+
+.swiper-pagination-bullet {
+    background: rgba(255,255,255,0.7); /* 分页器点点默认颜色 */
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff; /* 当前激活的点点颜色 */
+    opacity: 1;
+}
+
+
+/* 5. Section 标题样式 */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px; /* 模块间距 */
+    margin-bottom: 10px; /* 主副标题间距 */
+    color: #222;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px; /* 副标题与内容间距 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 6. Gallery Section (PICK UP, NEW PRODUCT, GALLERY) - 优化版 */
+.gallery-section {
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 使用CSS Grid布局，确保响应式设计 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start; /* 防止卡片高度不一致时的对齐问题 */
+}
+
+/* 优化的gallery-item样式 */
+.gallery-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    height: fit-content;
+    will-change: transform; /* GPU加速 */
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* 图片容器 - 统一尺寸标准化 */
+.gallery-item .image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* 统一16:9宽高比 */
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+/* 优化的图片样式 - 防止变形 */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例，裁剪多余部分 */
+    object-position: center; /* 居中显示 */
+    display: block;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* 悬停时轻微放大 */
+}
+
+/* 图片加载动画和懒加载优化 */
+.gallery-item img.lazy {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery-item img.loaded,
+.gallery-item img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 图片加载失败时的占位符 */
+.gallery-item img[src=""],
+.gallery-item img:not([src]) {
+    background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    animation: loading-shimmer 1.5s infinite linear;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+    100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .gallery-item img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 内容区域优化 */
+.gallery-item .item-content {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    min-height: 80px; /* 确保内容区域最小高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 标题样式优化 */
+.gallery-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c2c2c;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* 描述文字优化 */
+.gallery-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* 悬停状态优化 */
+.gallery-item:hover h3 {
+    color: #c9a96e; /* 金色主题色 */
+}
+
+.gallery-item:hover p {
+    color: #555;
+    opacity: 1;
+}
+
+/* ---- 针对 "精工智造" (#gallery) 的特殊样式 ---- */
+#gallery .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#gallery .gallery-item {
+    max-width: 400px; /* 限制最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+}
+
+#gallery .gallery-item .image-container {
+    aspect-ratio: 3 / 4; /* 精工智造使用3:4比例，适合长图 */
+}
+
+#gallery .gallery-item img {
+    object-fit: cover; /* 保持覆盖模式 */
+    object-position: center top; /* 从顶部开始显示 */
+}
+
+#gallery .gallery-item .item-content {
+    padding: 24px 20px;
+    text-align: center;
+}
+
+#gallery .gallery-item h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 0;
+}
+/* ---- 结束 "精工智造" 特殊样式 ---- */
+
+
+.gallery-more {
+    text-align: center;
+    margin-top: 30px; /* 与滚动区域的间距 */
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #333;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 8. 响应式设计调整 - 优化版 */
+
+/* 大屏幕 (1200px+) */
+@media (min-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 中等屏幕 (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 0 30px;
+    }
+
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 平板端 (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .gallery-item .item-content {
+        padding: 16px;
+    }
+
+    .gallery-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .gallery-item p {
+        font-size: 0.9rem;
+    }
+
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 手机端 (320px - 479px) */
+@media (max-width: 479px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .gallery-item {
+        max-width: 100%;
+    }
+
+    .gallery-item .item-content {
+        padding: 14px;
+    }
+
+    .gallery-item h3 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .gallery-item p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    #gallery .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #gallery .gallery-item .image-container {
+        aspect-ratio: 4 / 3; /* 手机端使用4:3比例 */
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-slider {
+        height: 50vh;
+        min-height: 350px;
+    }
+    .slide-caption h2 {
+        font-size: 1.6rem;
+    }
+    .slide-caption p {
+        font-size: 0.9rem;
+    }
+
+    .gallery-item {
+        width: 260px; /* 在中等屏幕上稍微减小卡片宽度 */
+    }
+    #gallery .gallery-item {
+        width: 240px; /* 合盛出品的卡片也相应调整 */
+    }
+}
+
+@media (max-width: 768px) {
+    /* 导航样式已在 index.html 中定义 */
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-top: 40px;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .main-slider {
+        height: 45vh;
+        min-height: 300px;
+    }
+    .slide-caption {
+        bottom: 8%;
+        padding: 10px 20px;
+    }
+    .slide-caption h2 {
+        font-size: 1.4rem;
+    }
+    .slide-caption p {
+        font-size: 0.8rem;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 38px;
+        height: 38px;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after {
+        font-size: 16px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+    .gallery-item {
+        width: 220px; /* 进一步减小卡片宽度 */
+    }
+    #gallery .gallery-item {
+        width: 200px; /* 合盛出品的卡片也相应调整 */
+    }
+    .gallery-item h3 {
+        font-size: 1rem;
+    }
+    .gallery-item p {
+        font-size: 0.85rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* 页脚单列显示 */
+        gap: 30px;
+    }
+    .footer-section {
+        text-align: center; /* 页脚内容居中 */
+    }
+    .newsletter-form {
+        flex-direction: column; /* 订阅表单垂直排列 */
+        align-items: center; /* 居中表单项 */
+    }
+    .newsletter-form input[type="email"] {
+        width: 100%;
+        max-width: 300px; /* 限制输入框最大宽度 */
+    }
+    .subscribe-btn {
+        width: 100%;
+        max-width: 300px; /* 限制按钮最大宽度 */
+    }
+    .payment-methods {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 导航样式已在 index.html 中定义 */
+
+    .main-slider {
+        height: 40vh;
+        min-height: 250px;
+    }
+    .slide-caption h2 {
+        font-size: 1.2rem;
+    }
+    .slide-caption p {
+        font-size: 0.7rem;
+    }
+     .swiper-button-next, .swiper-button-prev { /* 在非常小的屏幕上可以考虑隐藏导航箭头 */
+        display: none;
+    }
+
+    .gallery-item {
+        width: 180px; /* 为非常小的屏幕调整卡片宽度 */
+    }
+    #gallery .gallery-item {
+        width: 160px; /* 合盛出品的卡片也相应调整 */
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .section-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .more-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+/* Action Button 样式 */
+.action-button-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+[data-role="action-button"] {
+    position: relative;
+}
+
+[data-role="action-button"] .main-action {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1976D2;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-role="action-button"] .actions {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+[data-role="action-button"].active .actions {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-role="action-button"] .actions li {
+    margin-bottom: 10px;
+}
+
+[data-role="action-button"] .actions li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+[data-role="action-button"] .actions li a:hover {
+    transform: scale(1.1);
+    background: #f5f5f5;
+}
+
+[data-role="action-button"] .main-action:hover {
+    background: #1565C0;
+    transform: rotate(90deg);
+}
+
+[data-role="action-button"].active .main-action {
+    transform: rotate(45deg);
+    background: #1565C0;
+}
+
+/* 保证 Swiper 正常布局 */
+.swiper-container, .main-slider {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition-property: transform;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 隐藏 Swiper 左右按钮 */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* 活动导航项样式已在 index.html 中定义 */
+
+/* 首页订阅电子通讯区块样式 */
+.newsletter-section {
+    background: var(--bg-primary); /* 与页面背景保持一致 */
+    padding: 80px 0 60px 0;
+    text-align: center;
+    margin-top: 0;
+}
+.newsletter-title {
+    font-size: 1.68rem; /* 2.4rem * 0.7 = 1.68rem (缩小30%) */
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+.newsletter-desc {
+    font-size: 0.805rem; /* 1.15rem * 0.7 = 0.805rem (缩小30%) */
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+.newsletter-form-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.newsletter-form-large input[type="email"] {
+    flex: 1 1 350px;
+    min-width: 260px;
+    padding: 14px 16px; /* 稍微调小一点内边距 */
+    font-size: 0.77rem; /* 1.1rem * 0.7 = 0.77rem (缩小30%) */
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+.newsletter-form-large input[type="email"]:focus {
+    border-color: var(--text-primary);
+}
+.newsletter-form-large .subscribe-btn {
+    padding: 12px 28px; /* 稍微调小一点内边距 */
+    font-size: 0.77rem; /* 1.1rem * 0.7 = 0.77rem (缩小30%) */
+    border-radius: 10px;
+    background: var(--text-primary);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.newsletter-form-large .subscribe-btn:hover {
+    background: var(--text-secondary);
+}
+@media (max-width: 600px) {
+    .newsletter-section {
+        padding: 40px 0 30px 0;
+    }
+    .newsletter-title {
+        font-size: 1.05rem; /* 1.5rem * 0.7 = 1.05rem (缩小30%) */
+    }
+    .newsletter-desc {
+        font-size: 0.7rem; /* 1rem * 0.7 = 0.7rem (缩小30%) */
+        margin-bottom: 24px;
+    }
+    .newsletter-form-large {
+        flex-direction: column;
+        gap: 12px;
+        max-width: 95vw;
+    }
+    .newsletter-form-large input[type="email"],
+    .newsletter-form-large .subscribe-btn {
+        width: 100%;
+        max-width: 350px;
+        font-size: 0.7rem; /* 1rem * 0.7 = 0.7rem (缩小30%) */
+        padding: 10px 8px;
+    }
+}
+
+/* 自定义极简大字footer样式 */
+.custom-footer {
+    background: #393939;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12) inset;
+    padding: 60px 0 30px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-main-text {
+    color: #fff;
+    font-family: 'Montserrat', 'Noto Sans SC', Arial, sans-serif;
+    font-size: 6vw;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+.footer-sub-text {
+    color: #bdbdbd;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    .footer-main-text {
+        font-size: 2.6rem;
+    }
+    .footer-sub-text {
+        font-size: 0.5rem;
+    }
+    .custom-footer {
+        padding: 40px 0 18px 0;
+    }
+}
+
+.newsletter-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+    padding: 60px 0 40px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.newsletter-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    position: relative;
+    padding-bottom: 8px;
+}
+.newsletter-title.decorated::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: #b89a6a;
+    border-radius: 2px;
+    margin-top: 6px;
+}
+.newsletter-form-inline {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+.newsletter-form-inline input[type="email"] {
+    min-width: 340px;
+    padding: 18px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+}
+.newsletter-form-inline input[type="email"]:focus {
+    border-color: #b89a6a;
+}
+.gold-btn {
+    background: #b89a6a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    padding: 0 38px;
+    height: 56px;
+    box-shadow: 0 4px 16px rgba(184,154,106,0.12);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-left: 0;
+}
+.gold-btn:hover {
+    background: #a4844a;
+    box-shadow: 0 6px 20px rgba(184,154,106,0.18);
+}
+@media (max-width: 900px) {
+    .newsletter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        padding: 36px 0 24px 0;
+        max-width: 100%;
+    }
+    .newsletter-title {
+        font-size: 1.2rem;
+        padding-bottom: 6px;
+    }
+    .newsletter-title.decorated::after {
+        width: 32px;
+        height: 3px;
+        margin-top: 4px;
+    }
+    .newsletter-form-inline {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .newsletter-form-inline input[type="email"] {
+        min-width: 0;
+        width: 100%;
+        font-size: 1rem;
+        padding: 14px 12px;
+    }
+    .gold-btn {
+        width: 100%;
+        height: 44px;
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+
+/* 右上角语言切换按钮 */
+.lang-switch-btn {
+    background: #f5f6fa;
+    color: #1a2236;
+    border: 1.5px solid #d1d5db;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 28px;
+    box-shadow: 0 2px 12px rgba(26,34,54,0.06);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    letter-spacing: 0.04em;
+}
+.lang-switch-btn:hover {
+    background: #e4e7ef;
+    color: #2563ff;
+    border-color: #2563ff;
+}
+
+/* 移除金色按钮和主题色 */
+.gold-btn, .newsletter-title.decorated::after {
+    background: #2563ff !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(37,99,255,0.10) !important;
+}
+.gold-btn:hover {
+    background: #1a4bcc !important;
+}
+.newsletter-title.decorated::after {
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 6px;
+    background: #2563ff !important;
+}
+
+/* 其它全局色彩调整 */
+:root {
+    --primary-color: #2563FF;
+    --text-primary: #1A2236;
+    --text-secondary: #5A6276;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F0F3F8;
+    --border-color: #E5E7EB;
+    --link-color: #2563FF;
+    --hover-bg: rgba(37,99,255,0.06);
+    --footer-bg: #f5f5f5;
+}
+
+/* 居中大气Logo区块 */
+.logo-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0 24px 0;
+    background: transparent;
+}
+.logo-center-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(44,44,44,0.10);
+    margin-bottom: 18px;
+    object-fit: cover;
+}
+.logo-center-title-en {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #444;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.logo-center-subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 0.18em;
+    font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 8px 0;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .logo-center { padding: 12px 0 12px 0; }
+    .logo-center-title-en { font-size: 1.3rem; margin-bottom: 8px; }
+    .logo-center-subtitle { font-size: 0.95rem; padding: 4px 0; }
+}
+
+/* 简洁居中导航栏 */
+.main-nav.main-nav-simple {
+    background: none;
+    box-shadow: none;
+    border: none;
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav.main-nav-simple .nav-links {
+    justify-content: center;
+    gap: 48px;
+    padding: 0;
+    margin: 32px 0 0 0;
+}
+.main-nav.main-nav-simple .nav-item {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #222;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 8px;
+    transition: color 0.2s;
+    letter-spacing: 0.08em;
+}
+.main-nav.main-nav-simple .nav-item.active,
+.main-nav.main-nav-simple .nav-item:hover {
+    color: #111;
+    border-bottom: 2.5px solid #111;
+    background: none;
+    box-shadow: none;
+}
+@media (max-width: 900px) {
+    .main-nav.main-nav-simple .nav-links {
+        gap: 24px;
+        margin: 20px 0 0 0;
+    }
+    .main-nav.main-nav-simple .nav-item {
+        font-size: 1.05rem;
+    }
+}
+
+/* 顶部固定极简导航栏 - 无动画 */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sticky-nav .nav-links {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 48px;
+}
+.sticky-nav .nav-item,
+.sticky-nav .nav-item.active,
+.sticky-nav .nav-item:hover {
+    font-size: 1.45rem !important;
+    font-family: 'Montserrat', 'Noto Sans SC', sans-serif !important;
+    font-weight: 500 !important;
+    color: #222 !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 8px !important;
+    letter-spacing: 0.10em !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: initial !important;
+    transition: none !important;
+    text-decoration: none !important;
+}
+.sticky-nav .nav-item.active,
+.sticky-nav .nav-item:hover {
+    color: #111 !important;
+    font-weight: 700 !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+.sticky-nav .nav-links {
+    gap: 48px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+@media (max-width: 1200px) {
+    .logo-center-img { width: 80px; height: 80px; }
+    .logo-center-title-en { font-size: 1.5rem; }
+    .sticky-nav .nav-links { gap: 24px !important; padding-top: 8px !important; padding-bottom: 8px !important; }
+    .sticky-nav .nav-item,
+    .sticky-nav .nav-item.active,
+    .sticky-nav .nav-item:hover { font-size: 1rem !important; }
+}
+@media (max-width: 900px) {
+    .logo-center { padding: 7px 0 0 0; }
+    .logo-center-subtitle { margin-bottom: 0; }
+    .sticky-nav .nav-links { gap: 10px !important; }
+    .sticky-nav .nav-item,
+    .sticky-nav .nav-item.active,
+    .sticky-nav .nav-item:hover { font-size: 0.95rem !important; }
+}
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 21 / 9;      /* 关键：强制21:9比例 */
+    min-height: 320px;
+    max-height: 650px;         /* 可根据实际图片像素微调 */
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+.hero-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 900px) {
+    .hero-section {
+        aspect-ratio: 21 / 14;  /* 移动端适当变高一点 */
+        min-height: 120px;
+        max-height: 220px;
+    }
+}

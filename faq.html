@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>常见问题 | 合盛钮扣厂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="合盛钮扣厂常见问题解答" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
+</head>
+<body>
+    <div class="faq-page">
+        <h1 class="faq-main-title">常见问题</h1>
+        <p class="faq-description">我们整理了一份客户常见问题列表。<br>
+        如果您无法在此解决问题，请随时联系我们的客户支持部门。</p>
+
+        <div class="faq-categories">
+            <div class="faq-category">
+                <h2>关于收到商品后的退换货</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">我收到的产品有瑕疵，或者我收到的产品与我订购的产品不同</div>
+                        <div class="faq-answer">请立即联系客服，我们会为您妥善处理...</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">我想退货（换货），因为颜色、形状等与我预期的不同。</div>
+                        <div class="faq-answer">请在收到商品后7天内提出申请...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>关于会员注册与登录</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">会员注册流程是怎样的？</div>
+                        <div class="faq-answer">点击网站右上角的"注册"按钮，填写相关信息即可...</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">忘记密码怎么办？</div>
+                        <div class="faq-answer">点击登录页面的"忘记密码"链接，按提示操作即可重置...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>关于配送问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">正常发货需要多长时间？</div>
+                        <div class="faq-answer">一般在确认订单后1-3个工作日内发出...</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">是否支持国际配送？</div>
+                        <div class="faq-answer">目前我们支持大部分国家和地区的配送服务...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content container">
+            <p class="copyright">© <span id="currentYear">2024</span> 合盛钮扣厂. 版权所有.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // 折叠面板功能
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const item = question.parentElement;
+                
+                item.classList.toggle('active');
+                
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

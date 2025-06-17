@@ -1,0 +1,240 @@
+/* 顶级UI大师导航栏优化设计 */
+
+/* 导航栏容器 - 现代玻璃态设计 */
+.main-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 12px 16px;
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    max-width: 900px;
+    width: 90%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 导航栏滚动状态 */
+.main-nav.nav-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 6px 20px rgba(0, 0, 0, 0.08);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+/* 导航容器布局 */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* 导航链接容器 - 完美均匀分布 */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 720px;
+    gap: 8px;
+    position: relative;
+}
+
+/* 导航项基础样式 - 均匀分布 */
+.nav-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 12px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary, #374151);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 0; /* 允许文字收缩 */
+}
+
+/* 导航项悬停效果 */
+.nav-item:hover:not(.active) {
+    background: rgba(99, 102, 241, 0.08);
+    color: #6366f1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* 活跃状态 - 渐变背景 */
+.nav-item.active {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(99, 102, 241, 0.4),
+        0 3px 10px rgba(99, 102, 241, 0.2);
+    font-weight: 600;
+}
+
+/* 活跃状态悬停 */
+.nav-item.active:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 8px 25px rgba(99, 102, 241, 0.5),
+        0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* 导航项文字优化 */
+.nav-item span {
+    position: relative;
+    z-index: 2;
+}
+
+/* 微动效果 - 背景波纹 */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+.nav-item:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+/* 英文模式下的字体调整 */
+.nav-item.lang-en-nav {
+    font-size: 14px;
+    letter-spacing: 0.025em;
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .main-nav {
+    background: rgba(17, 24, 39, 0.85);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .nav-item {
+    color: #e5e7eb;
+}
+
+[data-theme="dark"] .nav-item:hover:not(.active) {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+}
+
+/* 响应式设计 - 平板 */
+@media (max-width: 1024px) {
+    .main-nav {
+        max-width: 95%;
+        padding: 10px 12px;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+/* 响应式设计 - 手机 */
+@media (max-width: 768px) {
+    .main-nav {
+        width: 95%;
+        padding: 8px;
+        border-radius: 16px;
+    }
+    
+    .nav-links {
+        gap: 4px;
+    }
+    
+    .nav-item {
+        font-size: 13px;
+        padding: 10px 6px;
+        border-radius: 12px;
+    }
+    
+    .nav-item.lang-en-nav {
+        font-size: 12px;
+    }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 12px;
+        padding: 8px 4px;
+        min-width: 0;
+    }
+    
+    /* 文字可能需要缩写 */
+    .nav-item[data-translate="product_intro"]::after {
+        content: "产品";
+    }
+    
+    .nav-item[data-translate="button_heart"]::after {
+        content: "钮心";
+    }
+    
+    .nav-item[data-translate="button_market"]::after {
+        content: "市集";
+    }
+    
+    .nav-item[data-translate="button_stories"]::after {
+        content: "物语";
+    }
+    
+    .nav-item[data-translate="about_hesheng"]::after {
+        content: "关于";
+    }
+    
+    /* 隐藏原文字，显示缩写 */
+    .nav-item span {
+        display: none;
+    }
+}
+
+/* 性能优化 - 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+    .nav-item,
+    .main-nav,
+    .nav-item::before {
+        transition: none !important;
+    }
+    
+    .nav-item:hover,
+    .nav-item.active {
+        transform: none !important;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .main-nav {
+        display: none;
+    }
+}

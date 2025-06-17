@@ -1,0 +1,50 @@
+:root {
+    /* 统一的主题颜色变量 - 合并所有重复定义 */
+    --primary-color: #2563FF;
+    --text-primary: #1A2236;
+    --text-secondary: #5A6276;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F0F3F8;
+    --border-color: #E5E7EB;
+    --link-color: #2563FF;
+    --transition-speed: 0.3s;
+
+    /* 扩展的主题变量 */
+    --hover-bg: rgba(37,99,255,0.06);
+    --nav-shadow: rgba(0, 0, 0, 0.1);
+    --hero-overlay: rgba(0, 0, 0, 0.4);
+    --card-bg: #ffffff;
+    --footer-bg: #f5f5f5;
+    --section-title: #1A2236;
+    --section-subtitle: #5A6276;
+    --gallery-text: #1A2236;
+    --gallery-hover: rgba(37,99,255,0.08);
+}
+
+[data-theme="dark"] {
+    /* 统一的暗色主题变量 */
+    --primary-color: #2563FF;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0AEC0;
+    --bg-primary: #1A2236;
+    --bg-secondary: #2A3346;
+    --border-color: #2D3748;
+    --link-color: #66a9ff;
+
+    /* 扩展的暗色主题变量 */
+    --hover-bg: rgba(37,99,255,0.10);
+    --nav-shadow: rgba(0, 0, 0, 0.2);
+    --hero-overlay: rgba(0, 0, 0, 0.6);
+    --card-bg: #2a2a2a;
+    --footer-bg: #222222;
+    --section-title: #ffffff;
+    --section-subtitle: #cccccc;
+    --gallery-text: #ffffff;
+    --gallery-hover: rgba(37,99,255,0.12);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+} 

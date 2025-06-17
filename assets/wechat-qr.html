@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信公众号二维码</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .qr-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        .qr-code {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+        h1 {
+            color: #07c160;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .instructions h3 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>微信公众号</h1>
+        <div class="qr-code">
+            <img src="微信公众号二维码.png" alt="微信公众号二维码" width="280" height="280" style="border-radius: 8px; border: 1px solid #eee;">
+        </div>
+        <p>扫描上方二维码关注我们的微信公众号</p>
+
+
+        
+        <div class="instructions">
+            <h3>如何关注：</h3>
+            <ol>
+                <li>打开微信APP</li>
+                <li>点击右上角的"+"号</li>
+                <li>选择"扫一扫"</li>
+                <li>扫描上方二维码</li>
+                <li>点击"关注"即可</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

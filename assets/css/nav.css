@@ -1,0 +1,127 @@
+/* 现代化导航栏样式 */
+.main-nav {
+    background: var(--bg-secondary);
+    padding: 12px 30px;
+    position: fixed;
+    width: 90%;
+    max-width: 1200px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-item {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 100px;
+}
+
+.nav-item:hover {
+    background: var(--hover-bg);
+}
+
+.nav-item.active {
+    background: var(--hover-bg);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+#languageToggle {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    margin-left: 5px;
+}
+
+#languageToggle:hover {
+    background: var(--hover-bg);
+}
+
+/* 主题切换按钮样式 */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 100px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.theme-switch-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.theme-switch-slider {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px var(--nav-shadow);
+    left: -2px;
+}
+
+[data-theme="dark"] .theme-switch-slider {
+    transform: translateX(28px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+} 

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于合盛 - 合盛钮扣厂</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* 关于页面专用样式 */
+        .about-hero {
+            background: linear-gradient(135deg, #c9a96e 0%, #d4af37 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/pattern.png') repeat;
+            opacity: 0.1;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .about-section {
+            margin-bottom: 80px;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a96e, #d4af37);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #c9a96e;
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .company-info {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item h4 {
+            color: #c9a96e;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-item p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            padding: 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: #c9a96e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero {
+                padding: 100px 20px 60px;
+            }
+
+            .about-content {
+                padding: 60px 20px;
+            }
+
+            .about-section h2 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .company-info {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← 返回首页</a>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>关于合盛钮扣厂</h1>
+            <p>专业钮扣制造商，致力于为全球客户提供高品质的钮扣产品和定制服务</p>
+        </div>
+    </section>
+
+    <div class="about-content">
+        <section class="about-section">
+            <h2>公司简介</h2>
+            <p style="text-align: center; font-size: 1.1rem; line-height: 1.8; color: #555; max-width: 800px; margin: 0 auto;">
+                合盛钮扣厂成立于1995年，是一家专业从事各类钮扣设计、生产和销售的现代化企业。
+                我们拥有先进的生产设备和专业的技术团队，致力于为服装、箱包、鞋帽等行业提供优质的钮扣产品。
+                经过多年的发展，我们已成为行业内知名的钮扣制造商，产品远销海内外。
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>核心优势</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">🏭</div>
+                    <h3>专业制造</h3>
+                    <p>拥有现代化生产线和严格的质量控制体系，确保每一颗钮扣都符合国际标准</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🎨</div>
+                    <h3>创新设计</h3>
+                    <p>专业设计团队紧跟时尚潮流，不断推出新颖独特的钮扣款式</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🌍</div>
+                    <h3>全球服务</h3>
+                    <p>产品远销欧美、东南亚等地区，为全球客户提供优质服务</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">⚡</div>
+                    <h3>快速交付</h3>
+                    <p>高效的生产流程和完善的供应链管理，确保订单及时交付</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="company-info">
+                <h2 style="text-align: center; margin-bottom: 40px;">公司信息</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>公司地址</h4>
+                        <p>广东省东莞市凤岗镇凤德岭凤鸣路36号</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>邮政编码</h4>
+                        <p>523692</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>营业时间</h4>
+                        <p>07:00 - 20:00</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>休息日</h4>
+                        <p>无休息日</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>成立时间</h4>
+                        <p>1995年</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>员工人数</h4>
+                        <p>200+ 人</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.about-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>

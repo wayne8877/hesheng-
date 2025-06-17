@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线询盘 - 合盛钮扣厂</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* 询盘页面专用样式 */
+        .inquiry-hero {
+            background: linear-gradient(135deg, #2c5aa0 0%, #3b82f6 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inquiry-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .inquiry-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .inquiry-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .inquiry-form {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .contact-item strong {
+            color: #3b82f6;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            padding: 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .inquiry-hero h1 {
+                font-size: 2rem;
+            }
+
+            .inquiry-hero {
+                padding: 100px 20px 60px;
+            }
+
+            .inquiry-content {
+                padding: 60px 20px;
+            }
+
+            .inquiry-form {
+                padding: 40px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← 返回首页</a>
+
+    <section class="inquiry-hero">
+        <div class="container">
+            <h1>在线询盘</h1>
+            <p>请填写以下表单，我们将在24小时内回复您的询盘</p>
+        </div>
+    </section>
+
+    <div class="inquiry-content">
+        <form class="inquiry-form" id="inquiryForm">
+            <div class="success-message" id="successMessage">
+                感谢您的询盘！我们已收到您的信息，将在24小时内回复您。
+            </div>
+            <div class="error-message" id="errorMessage">
+                提交失败，请检查网络连接后重试。
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">姓名 *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">公司名称</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">邮箱 *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">电话</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="product">产品类型</label>
+                <select id="product" name="product">
+                    <option value="">请选择产品类型</option>
+                    <option value="metal">金属钮扣</option>
+                    <option value="plastic">塑料钮扣</option>
+                    <option value="wood">木质钮扣</option>
+                    <option value="shell">贝壳钮扣</option>
+                    <option value="crystal">水晶钮扣</option>
+                    <option value="custom">定制钮扣</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">预计数量</label>
+                <input type="text" id="quantity" name="quantity" placeholder="例如：10000个">
+            </div>
+
+            <div class="form-group">
+                <label for="message">详细需求 *</label>
+                <textarea id="message" name="message" required placeholder="请详细描述您的需求，包括尺寸、颜色、材质等要求..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">提交询盘</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>联系方式</h3>
+            <div class="contact-item">
+                <strong>WhatsApp:</strong> +86 138 7598 8877
+            </div>
+            <div class="contact-item">
+                <strong>地址:</strong> 广东省东莞市凤岗镇凤德岭凤鸣路36号
+            </div>
+            <div class="contact-item">
+                <strong>营业时间:</strong> 07:00 - 20:00（无休息日）
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 模拟表单提交
+            const submitBtn = document.querySelector('.submit-btn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // 显示加载状态
+            submitBtn.textContent = '提交中...';
+            submitBtn.disabled = true;
+            
+            // 模拟网络请求
+            setTimeout(() => {
+                // 重置按钮
+                submitBtn.textContent = '提交询盘';
+                submitBtn.disabled = false;
+                
+                // 显示成功消息
+                successMsg.style.display = 'block';
+                errorMsg.style.display = 'none';
+                
+                // 清空表单
+                this.reset();
+                
+                // 3秒后隐藏成功消息
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 3000);
+            }, 1500);
+        });
+
+        // 表单验证
+        document.querySelectorAll('input[required], textarea[required]').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#dc3545';
+                } else {
+                    this.style.borderColor = '#28a745';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

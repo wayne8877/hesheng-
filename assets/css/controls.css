@@ -1,0 +1,127 @@
+/* 右上角控制按钮容器样式 */
+.top-right-controls {
+    position: fixed;
+    top: 30px;
+    right: calc(5% + 20px);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--bg-secondary);
+    padding: 8px 15px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* 语言切换按钮样式 */
+#languageToggle {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+#languageToggle:hover {
+    background: var(--hover-bg);
+}
+
+/* 主题切换按钮样式 */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.theme-switch-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    z-index: 1;
+}
+
+.theme-switch-slider {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px var(--nav-shadow);
+    left: -2px;
+}
+
+[data-theme="dark"] .theme-switch-slider {
+    transform: translateX(28px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .top-right-controls {
+        top: 20px;
+        right: 20px;
+        padding: 6px 12px;
+    }
+
+    #languageToggle {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .theme-switch-wrapper {
+        padding: 3px;
+    }
+
+    .theme-switch-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .theme-switch-slider {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-right-controls {
+        top: 15px;
+        right: 15px;
+        padding: 5px 10px;
+        gap: 10px;
+    }
+
+    #languageToggle {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .theme-switch-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .theme-switch-slider {
+        width: 20px;
+        height: 20px;
+    }
+} 
