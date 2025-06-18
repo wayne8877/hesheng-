@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/cdn-loader.css" /> <!-- CDN加载动画样式 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- 轮播图Swiper样式 -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"> <!-- 字体 -->
+    <link rel="stylesheet" href="assets/css/light-only.css" /> <!-- 强制亮色主题样式 -->
     <style>
         :root {
             /* 🎨 高端时尚企业设计系统 - 20年时尚行业标准 */
@@ -3695,6 +3696,39 @@
         }
     </script>
 
+    <script>
+        // 强制使用亮色主题
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置亮色主题
+            document.documentElement.setAttribute('data-theme', 'light');
+            
+            // 防止通过localStorage设置主题
+            localStorage.removeItem('theme');
+            localStorage.removeItem('selectedTheme');
+            
+            // 监听data-theme属性变化，确保始终为light
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && 
+                        mutation.attributeName === 'data-theme' &&
+                        document.documentElement.getAttribute('data-theme') !== 'light') {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                    }
+                });
+            });
+            
+            observer.observe(document.documentElement, { attributes: true });
+            
+            // 移除任何主题切换按钮和相关功能
+            const themeButtons = document.querySelectorAll('.theme-switch, .theme-switch-wrapper');
+            themeButtons.forEach(button => {
+                if(button) {
+                    button.style.display = 'none';
+                    button.style.visibility = 'hidden';
+                }
+            });
+        });
+    </script>
 <script type="application/ld+json">
 </script>
 </body>
