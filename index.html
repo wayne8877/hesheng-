@@ -1009,7 +1009,7 @@
             z-index: -1;
         }
 
-        /* � 时尚悬停效果 - 优雅提升 */
+        /* 🎨 时尚悬停效果 - 优雅提升 */
         .nav-item:hover:not(.active) {
             color: var(--text-primary);
             background: var(--nav-item-hover);
@@ -1866,93 +1866,126 @@
           line-height: 1.5;
         }
         .footer-dark-social {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          margin-top: 18px;
-          justify-content: flex-start;
-          grid-column: 5;
-          justify-self: end;
-          align-self: start;
+          display: grid;
+          grid-template-columns: repeat(5, auto);
+          gap: 15px;
+          margin-top: 10px;
+          width: fit-content;
         }
+        
         .footer-dark-social-icon {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #fff;
-          color: #232323;
-          width: 44px;
-          height: 44px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-right: 0;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-          position: relative;
-          overflow: hidden;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .footer-dark-social-icon::before {
+        
+        .footer-dark-social-icon svg {
+          width: 22px;
+          height: 22px;
+        }
+        
+        .footer-dark-social-icon:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 特定社交图标悬停颜色 */
+        .footer-dark-social-icon.facebook:hover {
+          background-color: #1877f2;
+          border-color: #1877f2;
+        }
+        
+        .footer-dark-social-icon.instagram:hover {
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          border-color: #e1306c;
+        }
+        
+        .footer-dark-social-icon.wechat:hover {
+          background-color: #07c160;
+          border-color: #07c160;
+        }
+        
+        .footer-dark-social-icon.xiaohongshu:hover {
+          background-color: #ff2442;
+          border-color: #ff2442;
+        }
+        
+        /* Button 大字样式 */
+        .footer-dark-button-row {
+          text-align: center;
+          padding: 60px 0 40px;
+          position: relative;
+          margin-top: 20px;
+          cursor: default;
+        }
+        
+        .footer-dark-button-row::before {
           content: '';
           position: absolute;
           top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          max-width: 1000px;
+          height: 1px;
+          background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.1) 50%, 
+            transparent 100%
+          );
+        }
+        
+        .footer-dark-button-row span {
+          font-size: 160px;
+          font-weight: 800;
+          color: rgba(255, 255, 255, 0.05);
+          letter-spacing: 15px;
+          display: inline-block;
+          text-transform: uppercase;
+          line-height: 1;
+          text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          font-family: 'Montserrat', sans-serif;
+          transform: scaleY(0.9);
+          position: relative;
+          overflow: hidden;
+          transition: color 0.5s ease;
+        }
+        
+        .footer-dark-button-row span::before {
+          content: '';
+          position: absolute;
           left: 0;
+          top: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+          background: linear-gradient(90deg, 
+            transparent, 
+            rgba(255, 255, 255, 0.05), 
+            transparent
+          );
           transform: translateX(-100%);
-          transition: transform 0.6s ease;
         }
-
-        .footer-dark-social-icon:hover::before {
-          transform: translateX(100%);
+        
+        .footer-dark-button-row:hover span {
+          color: rgba(255, 255, 255, 0.08);
         }
-
-        .footer-dark-social-icon:hover {
-          background: #e5e5e5;
-          color: #000;
-          transform: translateY(-2px) scale(1.05);
-          box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        
+        .footer-dark-button-row:hover span::before {
+          animation: lightPass 2s ease-in-out;
         }
-
-        .footer-dark-social-icon.facebook:hover {
-          background: #1877f2;
-          color: white;
+        
+        @keyframes lightPass {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
         }
-
-        .footer-dark-social-icon.instagram:hover {
-          background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-          color: white;
-        }
-
-        .footer-dark-social-icon.wechat:hover {
-          background: #07c160;
-          color: white;
-        }
-
-        .footer-dark-social-icon.xiaohongshu:hover {
-          background: #ff2442;
-          color: white;
-        }
-
-        .footer-dark-social-icon.xiaohongshu:hover .xiaohongshu-text {
-          fill: white !important;
-        }
-
-        .footer-dark-social-icon.whatsapp:hover {
-          background: #25d366;
-          color: white;
-        }
-
-        .footer-dark-social-icon svg {
-          width: 20px;
-          height: 20px;
-          display: block;
-          z-index: 1;
-          position: relative;
-        }
-
 
         @media (max-width: 900px) {
           .footer-dark-main {
@@ -2042,30 +2075,6 @@
           letter-spacing: 1.4px;
           padding-bottom: 32px;
           font-family: 'Montserrat', sans-serif;
-        }
-        @media (max-width: 700px) {
-          .footer-dark-marquee {
-            height: 36px;
-            margin-top: 18px;
-            margin-bottom: 18px;
-          }
-          .footer-dark-marquee-inner {
-            font-size: 1rem;
-          }
-          .footer-dark-marquee-inner span {
-            padding-right: 24px;
-          }
-          .footer-dark-button-row span {
-            font-size: 5rem;
-            letter-spacing: 12px;
-          }
-          .footer-dark-button-row {
-            padding: 36px 0 18px 0;
-          }
-          .footer-dark-copyright {
-            font-size: 0.665rem;
-            padding-bottom: 18px;
-          }
         }
 
         /* 🍔 汉堡菜单样式 */
@@ -2292,6 +2301,545 @@
             background: rgba(244, 228, 188, 0.1);
             border-left-color: #f4e4bc;
         }
+
+        /* 优化页脚样式 */
+        .footer-dark-complex {
+          background: #232323;
+          position: relative;
+          overflow: hidden;
+          margin-top: 60px;
+        }
+        
+        .footer-dark-complex::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: 
+            radial-gradient(circle at 20% 30%, rgba(60, 60, 60, 0.2) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(80, 80, 80, 0.15) 0%, transparent 50%);
+          pointer-events: none;
+        }
+        
+        .footer-container {
+          position: relative;
+          z-index: 1;
+        }
+        
+        .footer-dark-main {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 40px;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 50px 30px;
+        }
+        
+        .footer-dark-col {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .footer-dark-title {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          letter-spacing: 0.5px;
+          position: relative;
+          padding-bottom: 10px;
+          color: #fff;
+        }
+        
+        .footer-dark-title::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 30px;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .footer-links-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        
+        .footer-links-list li a {
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+          font-size: 15px;
+          transition: all 0.3s ease;
+          display: inline-block;
+        }
+        
+        .footer-links-list li a:hover {
+          color: #fff;
+          transform: translateX(5px);
+        }
+        
+        .company-info {
+          margin-top: 0;
+        }
+        
+        .company-info p {
+          margin-bottom: 16px;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.5;
+        }
+        
+        /* 社交图标区域 */
+        .footer-dark-social {
+          display: grid;
+          grid-template-columns: repeat(5, auto);
+          gap: 15px;
+          margin-top: 5px;
+        }
+        
+        .footer-dark-social-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          transition: all 0.3s ease;
+          text-decoration: none;
+        }
+        
+        .footer-dark-social-icon svg {
+          width: 20px;
+          height: 20px;
+        }
+        
+        .footer-dark-social-icon:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 特定社交图标悬停颜色 */
+        .footer-dark-social-icon.facebook:hover {
+          background-color: #1877f2;
+        }
+        
+        .footer-dark-social-icon.instagram:hover {
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .footer-dark-social-icon.wechat:hover {
+          background-color: #07c160;
+        }
+        
+        .footer-dark-social-icon.xiaohongshu:hover {
+          background-color: #ff2442;
+        }
+        
+        .footer-dark-social-icon.whatsapp:hover {
+          background-color: #25d366;
+          border-color: #25d366;
+        }
+        
+        /* 滚动字幕 */
+        .footer-dark-marquee {
+          width: 100%;
+          overflow: hidden;
+          background: #181818;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        }
+        
+        .footer-dark-marquee-inner {
+          display: flex;
+          white-space: nowrap;
+          font-size: 18px;
+          font-weight: 700;
+          color: #fff;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          animation: footerMarquee 20s linear infinite;
+        }
+        
+        .footer-dark-marquee-inner span {
+          display: inline-block;
+          padding-right: 40px;
+        }
+        
+        @keyframes footerMarquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        
+        /* Button 大字样式 */
+        .footer-dark-button-row {
+          text-align: center;
+          padding: 50px 0 30px;
+          position: relative;
+        }
+        
+        .footer-dark-button-row::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          max-width: 1000px;
+          height: 1px;
+          background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.1) 50%, 
+            transparent 100%
+          );
+        }
+        
+        .footer-dark-button-row span {
+          font-size: 120px;
+          font-weight: 800;
+          color: rgba(255, 255, 255, 0.08);
+          letter-spacing: 8px;
+          display: inline-block;
+        }
+        
+        /* 版权信息 */
+        .footer-dark-copyright {
+          text-align: center;
+          padding: 20px 0;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.5);
+          letter-spacing: 1px;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1024px) {
+          .footer-dark-main {
+            gap: 30px;
+            padding: 50px 30px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 90px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .footer-dark-main {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .footer-dark-col:last-child {
+            grid-column: span 2;
+            margin-top: 20px;
+            align-items: center;
+          }
+          
+          .footer-dark-social {
+            margin: 0 auto;
+          }
+          
+          .footer-dark-title {
+            font-size: 16px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 70px;
+            letter-spacing: 5px;
+          }
+          
+          .footer-dark-col:last-child .footer-dark-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .footer-dark-main {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px 20px;
+          }
+          
+          .footer-dark-col {
+            align-items: center;
+            text-align: center;
+          }
+          
+          .footer-dark-col:last-child {
+            grid-column: 1;
+          }
+          
+          .footer-dark-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          .footer-links-list li a:hover {
+            transform: translateY(-3px);
+          }
+          
+          .footer-dark-social {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            max-width: 280px;
+          }
+          
+          .footer-dark-button-row {
+            padding: 30px 0 20px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 50px;
+            letter-spacing: 3px;
+          }
+          
+          .footer-dark-marquee {
+            height: 40px;
+          }
+          
+          .footer-dark-marquee-inner {
+            font-size: 14px;
+          }
+        }
+        
+        /* 暗色主题适配 */
+        [data-theme="dark"] .footer-dark-title::after {
+          background: rgba(255, 255, 255, 0.2);
+        }
+        
+        [data-theme="dark"] .footer-dark-social-icon {
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* 优化页脚标题和布局 */
+        .footer-dark-title {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 24px;
+          letter-spacing: 0.8px;
+          position: relative;
+          padding-bottom: 12px;
+          color: #fff;
+          font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+        }
+        
+        .footer-dark-title::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 32px;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.3);
+          transition: width 0.3s ease;
+        }
+        
+        .footer-dark-title:hover::after {
+          width: 60px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 1024px) {
+          .footer-dark-main {
+            gap: 30px;
+            padding: 50px 30px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 120px;
+            letter-spacing: 10px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .footer-dark-main {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .footer-dark-col:last-child {
+            grid-column: span 2;
+            margin-top: 30px;
+            align-items: center;
+            text-align: center;
+          }
+          
+          .footer-dark-col:last-child .footer-dark-title {
+            text-align: center;
+          }
+          
+          .footer-dark-social {
+            margin: 0 auto;
+            grid-template-columns: repeat(5, auto);
+            gap: 15px;
+          }
+          
+          .footer-dark-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          
+          .footer-dark-col:last-child .footer-dark-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 100px;
+            letter-spacing: 8px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .footer-dark-main {
+            grid-template-columns: 1fr;
+            gap: 35px;
+            padding: 40px 20px;
+          }
+          
+          .footer-dark-col {
+            align-items: center;
+            text-align: center;
+          }
+          
+          .footer-dark-col:last-child {
+            grid-column: 1;
+            margin-top: 10px;
+          }
+          
+          .footer-dark-title {
+            font-size: 17px;
+            margin-bottom: 18px;
+          }
+          
+          .footer-dark-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+          }
+          
+          .footer-links-list {
+            align-items: center;
+          }
+          
+          .footer-links-list li a:hover {
+            transform: translateY(-3px);
+          }
+          
+          .footer-dark-social {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            max-width: 300px;
+          }
+          
+          .footer-dark-social-icon {
+            width: 44px;
+            height: 44px;
+          }
+          
+          .footer-dark-social-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+          
+          .footer-dark-button-row {
+            padding: 40px 0 30px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 70px;
+            letter-spacing: 5px;
+          }
+          
+          .footer-dark-marquee {
+            height: 40px;
+          }
+          
+          .footer-dark-marquee-inner {
+            font-size: 14px;
+          }
+        }
+        
+        @media (max-width: 380px) {
+          .footer-dark-social {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            max-width: 260px;
+          }
+          
+          .footer-dark-social-icon {
+            width: 40px;
+            height: 40px;
+          }
+          
+          .footer-dark-social-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+          
+          .footer-dark-button-row span {
+            font-size: 50px;
+            letter-spacing: 3px;
+          }
+        }
+
+        .footer-dark-button-row span {
+          font-size: 240px; /* 增大50% */
+          font-weight: 800;
+          color: rgba(255, 255, 255, 0.15); /* 提高亮度 */
+          letter-spacing: 15px;
+          display: inline-block;
+          text-transform: uppercase;
+          line-height: 1;
+          text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+          font-family: 'Montserrat', sans-serif;
+          transform: scaleY(0.9);
+          position: relative;
+          overflow: hidden;
+          transition: color 0.5s ease;
+        }
+
+        .footer-dark-button-row:hover span {
+          color: rgba(255, 255, 255, 0.2); /* 提高悬停时的亮度 */
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1024px) {
+          .footer-dark-button-row span {
+            font-size: 180px; /* 保持比例增大50% */
+            letter-spacing: 10px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .footer-dark-button-row span {
+            font-size: 150px; /* 保持比例增大50% */
+            letter-spacing: 8px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .footer-dark-button-row span {
+            font-size: 105px; /* 保持比例增大50% */
+            letter-spacing: 5px;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .footer-dark-button-row span {
+            font-size: 75px; /* 保持比例增大50% */
+            letter-spacing: 3px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -2314,15 +2862,15 @@
         <nav class="menu-nav">
             <a href="about.html" class="menu-item">
                 <span class="menu-icon">🏢</span>
-                <span class="menu-text">关于合盛</span>
+                <span class="menu-text" data-translate="menu_about">关于合盛</span>
             </a>
             <a href="inquiry.html" class="menu-item">
                 <span class="menu-icon">💬</span>
-                <span class="menu-text">在线询盘</span>
+                <span class="menu-text" data-translate="menu_inquiry">在线询盘</span>
             </a>
             <a href="regulations.html" class="menu-item">
                 <span class="menu-icon">⚖️</span>
-                <span class="menu-text">行业法律</span>
+                <span class="menu-text" data-translate="menu_regulations">行业法律</span>
             </a>
         </nav>
     </div>
@@ -2370,8 +2918,8 @@
     </section>
 
     <section id="pickup" class="gallery-section">
-        <h2 class="section-title" data-translate="pickup_title">锦扣匠制</h2>
-        <h3 class="section-subtitle" data-translate="pickup_subtitle">PICK UP</h3>
+        <h2 class="section-title">锦扣匠制</h2>
+        <h3 class="section-subtitle">PICK UP</h3>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <div class="image-container">
@@ -2488,8 +3036,8 @@
     </section>
 
     <section id="new-product" class="gallery-section">
-        <h2 class="section-title" data-translate="new_product_title">最新产品</h2>
-        <h3 class="section-subtitle" data-translate="new_product_subtitle">NEW PRODUCT</h3>
+        <h2 class="section-title">最新产品</h2>
+        <h3 class="section-subtitle">NEW PRODUCT</h3>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <div class="image-container">
@@ -2534,8 +3082,8 @@
     </section>
 
     <section id="gallery" class="gallery-section">
-        <h2 class="section-title" data-translate="gallery_title">精工智造</h2>
-        <h3 class="section-subtitle" data-translate="gallery_subtitle">GALLERY</h3>
+        <h2 class="section-title">精工智造</h2>
+        <h3 class="section-subtitle">GALLERY</h3>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <div class="image-container">
@@ -2584,59 +3132,64 @@
           <span>-GET IN TOUCH GET IN TOUCH GET IN TOUCH-GET IN TOUCH GET IN TOUCH GET IN TOUCH-</span>
         </div>
       </div>
-      <div class="footer-dark-main">
-        <div class="footer-dark-col">
-          <div class="footer-dark-title">公司信息</div>
-          <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">产品系列</a></li>
-            <li><a href="#">钮扣市集</a></li>
-            <li><a href="#">我们的故事</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">主题特色</a></li>
-          </ul>
-        </div>
-        <div class="footer-dark-col">
-          <div class="footer-dark-title">合盛钮扣厂</div>
-          <div class="company-info">
-            <p>广东省东莞市凤岗镇凤德岭凤鸣路36号</p>
-            <p>邮编：523692</p>
-            <p>营业时间：07:00-20:00</p>
-            <p>休息日：无休息日</p>
+      <div class="footer-container">
+        <div class="footer-dark-main">
+          <div class="footer-dark-col">
+            <h3 class="footer-dark-title" data-translate="company_info">公司信息</h3>
+            <ul class="footer-links-list">
+              <li><a href="#" data-translate="company_info_homepage">首页</a></li>
+              <li><a href="#" data-translate="company_info_products">产品系列</a></li>
+              <li><a href="#" data-translate="company_info_market">钮扣市集</a></li>
+              <li><a href="#" data-translate="company_info_stories">我们的故事</a></li>
+              <li><a href="#" data-translate="company_info_contact">联系我们</a></li>
+              <li><a href="#" data-translate="company_info_theme">主题特色</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="footer-dark-social">
-          <a href="https://www.facebook.com/hesheng.button?mibextid=wwXIfr" class="footer-dark-social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/heshengbotton?igsh=MW16cmVwdWo5Z2Nx&utm_source=qr" class="footer-dark-social-icon instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="assets/wechat-qr.html" class="footer-dark-social-icon wechat" aria-label="WeChat" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-3.72 0-6.73 2.741-6.73 6.12 0 1.747.75 3.333 2.001 4.459a.875.875 0 0 1 .313.991l-.343 1.298a.48.48 0 0 0-.049.186c0 .142.11.26.246.26a.284.284 0 0 0 .147-.05l1.674-.96a.78.78 0 0 1 .628-.089c.607.169 1.232.257 1.856.257 3.72 0 6.73-2.741 6.73-6.12s-3.01-6.352-6.473-6.352zm-3.378 4.393c.53 0 .959.439 .959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98zm4.378 0c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98z"/>
-            </svg>
-          </a>
-          <a href="https://www.xiaohongshu.com/user/profile/5f940936000000000101dc00?xsec_token=YB5-wR9amiwNFZ4PjDV2jzyEUgaeNRjkuNuoeIsskUv_c=&xsec_source=app_share&xhsshare=CopyLink&appuid=5f940936000000000101dc00&apptime=1749114355&share_id=d341bd710594482683371a0d619e5bde" class="footer-dark-social-icon xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <text x="12" y="14" text-anchor="middle" fill="currentColor" font-size="8" font-weight="bold" font-family="Arial, sans-serif" class="xiaohongshu-text">小红书</text>
-            </svg>
-          </a>
-          <a href="assets/whatsapp-qr.html" class="footer-dark-social-icon whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
-            </svg>
-          </a>
+          <div class="footer-dark-col">
+            <h3 class="footer-dark-title" data-translate="footer_company_title">合盛钮扣厂</h3>
+            <div class="company-info">
+              <p data-translate="footer_company_address">广东省东莞市凤岗镇凤德岭凤鸣路36号</p>
+              <p data-translate="footer_company_zip">邮编：523692</p>
+              <p data-translate="footer_company_hours">营业时间：07:00-20:00</p>
+              <p data-translate="footer_company_closing">休息日：无休息日</p>
+            </div>
+          </div>
+          <div class="footer-dark-col">
+            <h3 class="footer-dark-title" data-translate="footer_contact_us">联系我们</h3>
+            <div class="footer-dark-social">
+              <a href="https://www.facebook.com/hesheng.button?mibextid=wwXIfr" class="footer-dark-social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/heshengbotton?igsh=MW16cmVwdWo5Z2Nx&utm_source=qr" class="footer-dark-social-icon instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="assets/wechat-qr.html" class="footer-dark-social-icon wechat" aria-label="WeChat" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-3.72 0-6.73 2.741-6.73 6.12 0 1.747.75 3.333 2.001 4.459a.875.875 0 0 1 .313.991l-.343 1.298a.48.48 0 0 0-.049.186c0 .142.11.26.246.26a.284.284 0 0 0 .147-.05l1.674-.96a.78.78 0 0 1 .628-.089c.607.169 1.232.257 1.856.257 3.72 0 6.73-2.741 6.73-6.12s-3.01-6.352-6.473-6.352zm-3.378 4.393c.53 0 .959.439 .959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98zm4.378 0c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98z"/>
+                </svg>
+              </a>
+              <a href="https://www.xiaohongshu.com/user/profile/5f940936000000000101dc00?xsec_token=YB5-wR9amiwNFZ4PjDV2jzyEUgaeNRjkuNuoeIsskUv_c=&xsec_source=app_share&xhsshare=CopyLink&appuid=5f940936000000000101dc00&apptime=1749114355&share_id=d341bd710594482683371a0d619e5bde" class="footer-dark-social-icon xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <text x="12" y="14" text-anchor="middle" fill="currentColor" font-size="8" font-weight="bold" font-family="Arial, sans-serif" class="xiaohongshu-text">小红书</text>
+                </svg>
+              </a>
+              <a href="assets/whatsapp-qr.html" class="footer-dark-social-icon whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-dark-button-row">
         <span>BUTTON</span>
       </div>
-      <div class="footer-dark-copyright">
+      <div class="footer-dark-copyright" data-translate="all_rights_reserved">
         © 2025. HESHENG
       </div>
     </footer>
@@ -2787,38 +3340,43 @@
         // 🌐 小巧语言切换功能
         let currentLanguage = 'zh';
         let isLanguageToggleUsed = false;
+        let toggleLanguageFunction = null; // Reference to imported toggleLanguage function
+
+        async function loadLanguageSystem() {
+            try {
+                // Import the language module
+                const { toggleLanguage, initializeLanguage } = await import('./assets/js/language.js');
+                toggleLanguageFunction = toggleLanguage;
+                
+                // Initialize language system
+                await initializeLanguage();
+                
+                // Expose toggleLanguage function to window for use in inline handlers
+                window.toggleLanguageFromModule = toggleLanguage;
+            } catch (error) {
+                console.error('Failed to load language system:', error);
+            }
+        }
 
         function toggleLanguageMini() {
             const toggleButton = document.getElementById('languageToggleMini');
-            const textElement = document.getElementById('languageTextMini');
-
-            // 切换语言
-            currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
-            isLanguageToggleUsed = true;
-
-            // 更新按钮文本
-            if (currentLanguage === 'zh') {
-                textElement.textContent = '中/EN';
+            
+            // Call the imported toggleLanguage function if available
+            if (toggleLanguageFunction) {
+                toggleLanguageFunction();
+            } else if (typeof window.toggleLanguageFromModule === 'function') {
+                window.toggleLanguageFromModule();
             } else {
-                textElement.textContent = 'EN/中';
+                console.warn('Language toggle function not available yet');
             }
+
+            isLanguageToggleUsed = true;
 
             // 添加点击动画
             toggleButton.style.transform = 'scale(0.9)';
             setTimeout(() => {
                 toggleButton.style.transform = 'scale(1)';
             }, 150);
-
-            // 这里可以调用实际的语言切换逻辑
-            // 如果有现有的语言切换函数，可以在这里调用
-            try {
-                // 尝试调用现有的语言切换功能
-                if (typeof toggleLanguage === 'function') {
-                    toggleLanguage();
-                }
-            } catch (error) {
-                console.log('Language toggle function not available yet');
-            }
 
             // 3秒后自动隐藏按钮
             setTimeout(() => {
@@ -2846,27 +3404,16 @@
             try {
                 console.log('Initializing application...');
 
+                // Load language system first
+                await loadLanguageSystem();
+
                 // 调用nav.js中的loadNavigation处理通用导航逻辑（如active类）
                 const { loadNavigation } = await import('./assets/js/nav.js');
-                // console.log('Navigation module loaded for active link setting');
                 await loadNavigation();
-                // console.log('Active link setting attempted by nav.js');
 
-                // 页面特定初始化：语言和主题
-                const { initializeLanguage, toggleLanguage } = await import('./assets/js/language.js');
+                // 页面特定初始化：主题
                 const { initThemeSwitch } = await import('./assets/js/theme.js');
-
-                await initializeLanguage();
                 initThemeSwitch();
-                // console.log('Language and Theme initialized by page script');
-
-                const langToggle = document.getElementById('languageToggle');
-                if (langToggle) {
-                    // console.log('Found language toggle button in page, binding click event');
-                    langToggle.addEventListener('click', toggleLanguage);
-                } else {
-                    console.warn('Language toggle button not found in page script for index.html');
-                }
 
                 // 🎨 初始化高端导航效果
                 addNavItemEffects();
