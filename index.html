@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- 轮播图Swiper样式 -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"> <!-- 字体 -->
     <link rel="stylesheet" href="assets/css/light-only.css" /> <!-- 强制亮色主题样式 -->
+    <script src="assets/js/temp-fix.js"></script> <!-- 临时修复文件 -->
     <style>
         :root {
             /* 🎨 高端时尚企业设计系统 - 20年时尚行业标准 */
@@ -2881,11 +2882,15 @@
         <span id="languageTextMini">中/EN</span>
     </div>
 
-    <!-- 居中大气Logo区块 -->
+    <!-- 优化版居中大气Logo区块 -->
     <div class="logo-center">
-        <img src="assets/images/logo.png" alt="Logo" class="logo-center-img" />
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo" class="logo-center-img" />
+        </a>
         <div class="logo-center-title-en">HESHENG BUTTON FACTORY</div>
         <div class="logo-center-subtitle">BUTTONS & CRAFTS</div>
+        
+        <!-- 水平导航栏已移除 -->
     </div>
     <!-- 主要内容区域 -->
     <section class="hero-section">
@@ -3170,7 +3175,7 @@
               </a>
               <a href="assets/wechat-qr.html" class="footer-dark-social-icon wechat" aria-label="WeChat" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-3.72 0-6.73 2.741-6.73 6.12 0 1.747.75 3.333 2.001 4.459a.875.875 0 0 1 .313.991l-.343 1.298a.48.48 0 0 0-.049.186c0 .142.11.26.246.26a.284.284 0 0 0 .147-.05l1.674-.96a.78.78 0 0 1 .628-.089c.607.169 1.232.257 1.856.257 3.72 0 6.73-2.741 6.73-6.12s-3.01-6.352-6.473-6.352zm-3.378 4.393c.53 0 .959.439 .959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98zm4.378 0c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98z"/>
+                  <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18 0 .659-.52 1.188-1.162 1.188-.642 0-1.162-.529-1.162-1.188 0-.651.52-1.18 1.162-1.18zm5.34 2.867c-3.72 0-6.73 2.741-6.73 6.12 0 1.747.75 3.333 2.001 4.459a.875.875 0 0 1 .313.991l-.343 1.298a.48.48 0 0 0-.049.186c0 .142.11.26.246.26a.284.284 0 0 0 .147-.05l1.674-.96a.78.78 0 0 1 .628-.089c.607.169 1.232.257 1.856.257 3.72 0 6.73-2.741 6.73-6.12s-3.01-6.352-6.473-6.352zm-3.378 4.393c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98zm4.378 0c.53 0 .959.439.959.98 0 .541-.429.98-.959.98s-.959-.439-.959-.98c0-.541.429-.98.959-.98z"/>
                 </svg>
               </a>
               <a href="https://www.xiaohongshu.com/user/profile/5f940936000000000101dc00?xsec_token=YB5-wR9amiwNFZ4PjDV2jzyEUgaeNRjkuNuoeIsskUv_c=&xsec_source=app_share&xhsshare=CopyLink&appuid=5f940936000000000101dc00&apptime=1749114355&share_id=d341bd710594482683371a0d619e5bde" class="footer-dark-social-icon xiaohongshu" aria-label="小红书" target="_blank" rel="noopener noreferrer">
@@ -3200,6 +3205,9 @@
     <script>
         // 初始化轮播图
         document.addEventListener('DOMContentLoaded', function() {
+            // 设置当前页面导航项为激活状态
+            setActiveNavItem();
+            
             const heroSwiper = new Swiper('.hero-swiper', {
                 // 轮播配置
                 loop: true,
@@ -3286,6 +3294,26 @@
             // 初始化汉堡菜单
             initHamburgerMenu();
         });
+        
+        // 设置当前页面导航项为激活状态
+        function setActiveNavItem() {
+            // 获取当前页面路径
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop();
+            
+            // 获取所有导航项
+            const navItems = document.querySelectorAll('.horizontal-nav-item');
+            
+            // 设置激活状态
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === pageName || (pageName === '' && href === 'index.html')) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
 
         // 🍔 汉堡菜单功能
         function toggleHamburgerMenu() {
